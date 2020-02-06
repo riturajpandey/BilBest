@@ -87,13 +87,11 @@
             <Color x:Key="GrayTextColor">#A4A4A4</Color>
             <!--#endregion-->
 
-            <!--#region Controls -->
-
+            <!--#region Controls -->  
             <!--#region Frames -->
             <!--Round White Background Frame-->
             <Style x:Key="PrimaryFrame" TargetType="Frame">
-                <Setter Property="BackgroundColor" Value="{StaticResource AppWhiteColor}"/>
-                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="BackgroundColor" Value="{StaticResource AppWhiteColor}"/> 
                 <Setter Property="Padding" Value="10,5,10,5" />
                 <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="CornerRadius" Value="8" />
@@ -103,8 +101,7 @@
 
             <!--Round White Background Shadowed Frame-->
             <Style x:Key="SecondaryFrame" TargetType="Frame">
-                <Setter Property="BackgroundColor" Value="{StaticResource AppWhiteColor}"/>
-                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="BackgroundColor" Value="{StaticResource AppWhiteColor}"/> 
                 <Setter Property="Padding" Value="10,5,10,5" />
                 <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="CornerRadius" Value="8" />
@@ -114,8 +111,7 @@
 
             <!--Round Big Frame-->
             <Style x:Key="BigFrame" TargetType="Frame">
-                <Setter Property="BackgroundColor" Value="{StaticResource AppWhiteColor}"/>
-                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="BackgroundColor" Value="{StaticResource AppWhiteColor}"/> 
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HeightRequest" Value="75" />
                 <Setter Property="CornerRadius" Value="37.5" />
@@ -124,8 +120,7 @@
             </Style>
 
             <!--Round Slight Big Frame-->
-            <Style x:Key="SlightBigFrame" TargetType="Frame"> 
-                <Setter Property="BorderWidth" Value="1" />
+            <Style x:Key="SlightBigFrame" TargetType="Frame">  
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HeightRequest" Value="60" />
                 <Setter Property="CornerRadius" Value="30" />
@@ -134,8 +129,7 @@
             </Style>
 
             <!--Round Small Height Frame-->
-            <Style x:Key="SmallHeightFrame" TargetType="Frame"> 
-                <Setter Property="BorderWidth" Value="0" />
+            <Style x:Key="SmallHeightFrame" TargetType="Frame">  
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="CornerRadius" Value="20" />
@@ -144,8 +138,7 @@
             </Style>
 
             <!--Round Very Small Height Frame-->
-            <Style x:Key="SmallHeightFrame" TargetType="Frame">
-                <Setter Property="BorderWidth" Value="0" />
+            <Style x:Key="VerySmallHeightFrame" TargetType="Frame"> 
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HeightRequest" Value="35" />
                 <Setter Property="CornerRadius" Value="17.5" />
@@ -154,7 +147,7 @@
             </Style>
 
             <!--#endregion-->
-            
+
             <!--#region Buttons -->
 
             <!--Round Primary Button-->
@@ -164,67 +157,65 @@
                 <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="CornerRadius" Value="25" />
                 <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
-                <Setter Property="IsClippedToBounds" Value="True" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
-            
-            <!--Round Secondary Button-->
+
+            <!--Round Secondary Button--> 
             <Style x:Key="SecondayButton" TargetType="Button">
                 <Setter Property="BorderWidth" Value="0" />
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HeightRequest" Value="45" />
-                <Setter Property="CornerRadius" Value="22.5" />
+                <Setter Property="CornerRadius" Value="22" />
                 <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
-                <Setter Property="IsClippedToBounds" Value="True" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
-
-            <!--Round Small Transparent Button-->
+ 
+            <!--Round Small Transparent Button--> 
             <Style x:Key="SmallTraspButton" TargetType="Button">
-                <Setter Property="BorderWidth" Value="1.5" />
+                <Setter Property="BorderWidth" Value="1" />
                 <Setter Property="BorderColor" Value="#71899A" />
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="CornerRadius" Value="22" />
                 <Setter Property="TextColor" Value="#71899A" />
-                <Setter Property="IsClippedToBounds" Value="True" />
                 <Setter Property="FontAttributes" Value="None" />
             </Style>
 
-            <!--Rectangle Round Small Transparent Button-->
-            <Style x:Key="SmallTraspButton" TargetType="Button">
-                <Setter Property="BorderWidth" Value="1.5" />
+             <!--Rectangle Round Small Transparent Button-->
+            <Style x:Key="SemiSmallTraspButton" TargetType="Button">
+                <Setter Property="BorderWidth" Value="1" />
                 <Setter Property="BorderColor" Value="#71899A" />
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HeightRequest" Value="30" />
                 <Setter Property="CornerRadius" Value="5" />
                 <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
-                <Setter Property="IsClippedToBounds" Value="True" />
                 <Setter Property="FontAttributes" Value="None" />
             </Style>
+
+            <!--#endregion-->
+
+            <!--#region Image-->
+            <Style x:Key="PrimaryDropDownImg" TargetType="Image">  
+                <Setter Property="HeightRequest" Value="15" />
+                <Setter Property="WidthRequest" Value="15" />    
+            </Style>
+
+            <!--#endregion-->
+             
+            <!--#region Labels -->
+            <!--Primary Headers-->
+            <Style x:Key="PrimaryGrayHeaders" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource TextGrayColor}" />  
+            </Style>
+
+            <!--#endregion-->
+
+
+            <!--#endregion-->
  
-            <!--#endregion-->
-
-            <!--#region Images -->
-            <!--Drop Down Image-->
-            <Style x:Key="PrimaryDropDownImg" TargetType="Image">
-                <Setter Property="Padding" Value="0" />
-                <Setter Property="HeightRequest" Value="15" />
-                <Setter Property="WidthRequest" Value="15" />
-            </Style>
-            <!--#endregion-->
-
-            <!--#region Lavels -->
-            <!--Primary Header Label-->
-            <Style x:Key="PrimaryDropDownImg" TargetType="Label">
-                <Setter Property="Padding" Value="0" />
-                <Setter Property="HeightRequest" Value="15" />
-                <Setter Property="WidthRequest" Value="15" />
-            </Style>
-            <!--#endregion-->
-
-            <!--#endregion-->
-
             <!--#region Fonts -->
             <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsBlack">
                 <On Platform="iOS" Value="Poppins-Black"/>

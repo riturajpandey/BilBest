@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="BilBest.MainPage">
    
-        <StackLayout>
+        <StackLayout> 
         <Label Text="Welcome to Xamarin Forms! (OpenSans-Bold)" FontFamily="{StaticResource PoppinsBlack}" />
         <Label Text="Welcome to Xamarin Forms! (OpenSans-Regular)" FontFamily="{StaticResource PoppinsBlackItalic}" />
         <Label Text="Welcome to Xamarin Forms! (OpenSans-Bold)" FontFamily="{StaticResource PoppinsBold}" />
