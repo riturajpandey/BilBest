@@ -10,7 +10,7 @@ namespace BilBest
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Views.Welcome.WelcomePage());
         }
 
         protected override void OnStart()
