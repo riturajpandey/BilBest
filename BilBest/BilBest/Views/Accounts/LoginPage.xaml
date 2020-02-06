@@ -10,9 +10,9 @@
              <!--Main Grid-->
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,70"
                   BackgroundColor="{StaticResource AppOrangeColor}">
-                <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppBlueColor}">
+                <!--<Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppBlueColor}">
                     
-                </Frame>
+                </Frame>-->
             </Grid>
         </StackLayout>
     </ContentPage.Content>

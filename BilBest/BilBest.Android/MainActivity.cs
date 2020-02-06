@@ -40,7 +40,7 @@ namespace BilBest.Droid
 
             #region 
             //To set Status Bar Color :
-            Window.ClearFlags(WindowManagerFlags.Fullscreen);
+            Window.AddFlags(WindowManagerFlags.Fullscreen);
             Window.ClearFlags(WindowManagerFlags.ForceNotFullscreen);
             Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#0984e3")); 
             #endregion

@@ -221,7 +221,7 @@
             <!--Primary White Big Headers-->
             <Style x:Key="PrimaryBigWhiteHeaders" TargetType="Label">
                 <Setter Property="FontSize" Value="24" />
-                <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsBold}" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
             </Style>
@@ -229,7 +229,7 @@
             <!--Secondary White Headers-->
             <Style x:Key="SecondaryWhiteHeaders" TargetType="Label">
                 <Setter Property="FontSize" Value="22" />
-                <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsBold}" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
             </Style>
