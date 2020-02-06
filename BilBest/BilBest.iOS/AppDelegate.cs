@@ -22,9 +22,14 @@ namespace BilBest.iOS
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
-            global::Xamarin.Forms.Forms.Init();
-            CardsViewRenderer.Preserve();
+        { 
+            #region Initializing Packages
+
+            global::Xamarin.Forms.Forms.Init(); 
+            Rg.Plugins.Popup.Popup.Init();
+            Plugin.InputKit.Platforms.iOS.Config.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(); 
+            #endregion
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
