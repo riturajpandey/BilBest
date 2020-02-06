@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Acr.UserDialogs;
+using Plugin.CurrentActivity;
 
 namespace BilBest.Droid
 {
@@ -18,10 +20,25 @@ namespace BilBest.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+             
+            #region Initializing Packages 
 
+            UserDialogs.Init(this);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
+            UserDialogs.Init(this);
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+            Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
+             
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true); 
+            Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
+
+            #endregion
+
             LoadApplication(new App());
+              
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
