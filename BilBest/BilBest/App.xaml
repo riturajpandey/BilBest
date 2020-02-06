@@ -22,7 +22,7 @@
             <Color x:Key="AppLightBlueCheckBoxColor">#87F8D1</Color>
             <Color x:Key="AppDarkBlueColor">#586AC2</Color>
             <Color x:Key="AppDotBlueColor">#55A1C3</Color>
-            <Color x:Key="AppLightBlueTextColor">#4DC1E9</Color>
+            <Color x:Key="AppVeryLightBlueTextColor">#4DC1E9</Color>
             <Color x:Key="AppMeterBlueColor">#7ED6DF</Color>
             <Color x:Key="AppMeterDotBlueColor">#7CD6DF</Color>
             <Color x:Key="AppPieBlueColor">#B2A7FD</Color>
@@ -75,16 +75,14 @@
             <Color x:Key="AppDarkRedColor">#E55F5E</Color>
             <Color x:Key="AppRedColor">#D32D2E</Color>
             <Color x:Key="AppRedTextColor">#F92B2B</Color>
-
-
-            <!--White Black Gray Shades-->
+ 
+            <!--Black Gray Shades-->
             <Color x:Key="AppTextBlackColor">#2D3436</Color>
             <Color x:Key="TextGrayColor">#636E72</Color>
             <Color x:Key="DakGrayBackgroundColor">#3D3D3D</Color>
             <Color x:Key="LightGrayBackgroundColor">#707070</Color>
             <Color x:Key="LightGrayColor">#F6F6F6</Color>
-            <Color x:Key="AppBlackColor">#000000</Color>
-            <Color x:Key="AppWhiteColor">#FFFFFF</Color>
+            <Color x:Key="AppBlackColor">#000000</Color> 
             <Color x:Key="VeryLightGrayTextColor">#C1C1C1</Color>
             <Color x:Key="GrayTextColor">#A4A4A4</Color>
             <!--#endregion-->
