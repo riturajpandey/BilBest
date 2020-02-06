@@ -100,10 +100,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renders\CustomLabelRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Poppins-Black.ttf" />
+    <AndroidAsset Include="Assets\Poppins-BlackItalic.ttf" />
+    <AndroidAsset Include="Assets\Poppins-Bold.ttf" />
+    <AndroidAsset Include="Assets\Poppins-BoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Poppins-ExtraBold.ttf" />
+    <AndroidAsset Include="Assets\Poppins-ExtraBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Poppins-ExtraLight.ttf" />
+    <AndroidAsset Include="Assets\Poppins-ExtraLightItalic.ttf" />
+    <AndroidAsset Include="Assets\Poppins-Italic.ttf" />
+    <AndroidAsset Include="Assets\Poppins-Light.ttf" />
+    <AndroidAsset Include="Assets\Poppins-LightItalic.ttf" />
+    <AndroidAsset Include="Assets\Poppins-Medium.ttf" />
+    <AndroidAsset Include="Assets\Poppins-MediumItalic.ttf" />
+    <AndroidAsset Include="Assets\Poppins-Regular.ttf" />
+    <AndroidAsset Include="Assets\Poppins-SemiBold.ttf" />
+    <AndroidAsset Include="Assets\Poppins-SemiBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Poppins-Thin.ttf" />
+    <AndroidAsset Include="Assets\Poppins-ThinItalic.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -126,12 +145,10 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Folder Include="Dependencies\" />
-    <Folder Include="Renders\" />
-    <Folder Include="Resources\drawable\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BilBest\BilBest.csproj">
       <Project>{2617EA9B-8C27-4E73-8F02-2C5F6FB2E6D9}</Project>
