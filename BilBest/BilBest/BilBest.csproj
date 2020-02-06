@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CustomControls\" />
     <Folder Include="Helpers\" />
     <Folder Include="Common\" />
     <Folder Include="Interfaces\" />
@@ -25,6 +24,7 @@
     <Folder Include="Services\" />
     <Folder Include="Providers\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
+    <Folder Include="Views\Accounts\" />
+    <Folder Include="Views\Welcome\" />
   </ItemGroup>
 </Project>
