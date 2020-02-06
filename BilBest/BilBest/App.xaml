@@ -205,12 +205,23 @@
  
             <!--#endregion-->
 
+            <!--#region Images -->
             <!--Drop Down Image-->
-            <Style x:Key="PrimaryDropDownImg" TargetType="Image"> 
+            <Style x:Key="PrimaryDropDownImg" TargetType="Image">
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="HeightRequest" Value="15" />
-                <Setter Property="WidthRequest" Value="15" />    
+                <Setter Property="WidthRequest" Value="15" />
             </Style>
+            <!--#endregion-->
+
+            <!--#region Lavels -->
+            <!--Primary Header Label-->
+            <Style x:Key="PrimaryDropDownImg" TargetType="Label">
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="HeightRequest" Value="15" />
+                <Setter Property="WidthRequest" Value="15" />
+            </Style>
+            <!--#endregion-->
 
             <!--#endregion-->
 
