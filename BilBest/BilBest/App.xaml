@@ -88,7 +88,81 @@
             <Color x:Key="VeryLightGrayTextColor">#C1C1C1</Color>
             <Color x:Key="GrayTextColor">#A4A4A4</Color>
             <!--#endregion-->
- 
+
+            <!--#region Fonts -->
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsBlack">
+                <On Platform="iOS" Value="Poppins-Black"/>
+                <On Platform="Android" Value="Poppins-Black.ttf#Poppins-Black"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsBlackItalic">
+                <On Platform="iOS" Value="Poppins-BlackItalic"/>
+                <On Platform="Android" Value="Poppins-BlackItalic.ttf#Poppins-BlackItalic"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsBold">
+                <On Platform="iOS" Value="Poppins-Bold"/>
+                <On Platform="Android" Value="Poppins-Bold.ttf#Poppins-Bold"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsBoldItalic">
+                <On Platform="iOS" Value="Poppins-BoldItalic"/>
+                <On Platform="Android" Value="Poppins-BoldItalic.ttf#Poppins-BoldItalic"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsExtraBold">
+                <On Platform="iOS" Value="Poppins-ExtraBold"/>
+                <On Platform="Android" Value="Poppins-ExtraBold.ttf#Poppins-ExtraBold"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsExtraBoldItalic">
+                <On Platform="iOS" Value="Poppins-ExtraBoldItalic"/>
+                <On Platform="Android" Value="Poppins-ExtraBoldItalic.ttf#Poppins-ExtraBoldItalic"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsExtraLight">
+                <On Platform="iOS" Value="Poppins-ExtraLight"/>
+                <On Platform="Android" Value="Poppins-ExtraLight.ttf#Poppins-ExtraLight"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsExtraLightItalic">
+                <On Platform="iOS" Value="Poppins-ExtraLightItalic"/>
+                <On Platform="Android" Value="Poppins-ExtraLightItalic.ttf#Poppins-ExtraLightItalicc"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsItalic">
+                <On Platform="iOS" Value="Poppins-Italic"/>
+                <On Platform="Android" Value="Poppins-Italic.ttf#Poppins-Italic"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsLight">
+                <On Platform="iOS" Value="Poppins-Light"/>
+                <On Platform="Android" Value="Poppins-Light.ttf#Poppins-Light"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsLightItalic">
+                <On Platform="iOS" Value="Poppins-LightItalic"/>
+                <On Platform="Android" Value="Poppins-LightItalic.ttf#Poppins-LightItalic"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsMedium">
+                <On Platform="iOS" Value="Poppins-BlackItalic"/>
+                <On Platform="Android" Value="Poppins-Medium.ttf#Poppins-Medium"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsMediumItalic">
+                <On Platform="iOS" Value="Poppins-MediumItalic"/>
+                <On Platform="Android" Value="Poppins-MediumItalic.ttf#Poppins-MediumItalic"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsRegular">
+                <On Platform="iOS" Value="Poppins-Regular"/>
+                <On Platform="Android" Value="Poppins-Regular.ttf#Poppins-Regular"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsSemiBold">
+                <On Platform="iOS" Value="Poppins-SemiBold"/>
+                <On Platform="Android" Value="Poppins-SemiBold.ttf#Poppins-SemiBold"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsSemiBoldItalic">
+                <On Platform="iOS" Value="Poppins-SemiBoldItalic"/>
+                <On Platform="Android" Value="Poppins-SemiBoldItalic.ttf#Poppins-SemiBoldItalic"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsThin">
+                <On Platform="iOS" Value="Poppins-Thin"/>
+                <On Platform="Android" Value="Poppins-Thin.ttf#Poppins-Thin"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PoppinsThinItalic">
+                <On Platform="iOS" Value="Poppins-ThinItalic"/>
+                <On Platform="Android" Value="Poppins-ThinItalic.ttf#Poppins-ThinItalic"/>
+            </OnPlatform>
+            <!--#endregion-->
         </ResourceDictionary>
         
     </Application.Resources>
