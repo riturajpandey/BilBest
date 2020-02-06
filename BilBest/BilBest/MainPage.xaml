@@ -5,12 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BilBest.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+   
+        <StackLayout>
+        <Label Text="Welcome to Xamarin Forms! (OpenSans-Bold)" FontFamily="{StaticResource PoppinsBlack}" />
+        <Label Text="Welcome to Xamarin Forms! (OpenSans-Regular)" FontFamily="{StaticResource PoppinsBlackItalic}" />
+        <Label Text="Welcome to Xamarin Forms! (OpenSans-Bold)" FontFamily="{StaticResource PoppinsBold}" />
+        <Label Text="Welcome to Xamarin Forms! (OpenSans-Regular)" FontFamily="{StaticResource PoppinsBoldItalic}" />
     </StackLayout>
-
 </ContentPage>
