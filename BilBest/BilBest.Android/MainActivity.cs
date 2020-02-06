@@ -35,7 +35,7 @@ namespace BilBest.Droid
              
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true); 
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
-
+            CardsViewRenderer.Preserve();
             #endregion
 
             LoadApplication(new App());

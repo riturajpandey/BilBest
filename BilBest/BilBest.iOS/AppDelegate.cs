@@ -28,7 +28,8 @@ namespace BilBest.iOS
             global::Xamarin.Forms.Forms.Init(); 
             Rg.Plugins.Popup.Popup.Init();
             Plugin.InputKit.Platforms.iOS.Config.Init();
-            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(); 
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            CardsViewRenderer.Preserve();
             #endregion
             LoadApplication(new App());
 
