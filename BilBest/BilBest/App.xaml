@@ -203,7 +203,7 @@
             <!--#endregion-->
              
             <!--#region Labels -->
-            <!--Primary Headers-->
+            <!--Primary Gray Headers-->
             <Style x:Key="PrimaryGrayHeaders" TargetType="Label">
                 <Setter Property="FontSize" Value="16" />
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
@@ -211,8 +211,23 @@
                 <Setter Property="TextColor" Value="{StaticResource TextGrayColor}" />  
             </Style>
 
-            <!--#endregion-->
+            <!--Primary White Big Headers-->
+            <Style x:Key="PrimaryBigWhiteHeaders" TargetType="Label">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
+            </Style>
 
+            <!--Secondary White Headers-->
+            <Style x:Key="SecondaryWhiteHeaders" TargetType="Label">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
+            </Style>
+
+            <!--#endregion-->
 
             <!--#endregion-->
  

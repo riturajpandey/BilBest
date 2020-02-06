@@ -32,10 +32,12 @@
     <Folder Include="Common\" />
     <Folder Include="ViewModels\Account\" />
     <Folder Include="ViewModels\Welcome\" />
-    <Folder Include="Views\Accounts\" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\Accounts\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Welcome\WelcomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
