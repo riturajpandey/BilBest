@@ -6,6 +6,90 @@
              mc:Ignorable="d"
              x:Class="BilBest.App">
     <Application.Resources>
+        
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+             
+            <!--#region Colors -->
+            
+            <!--Colors-->
+            <!--Blue Shades-->
+            <Color x:Key="AppBlueColor">#0984E3</Color>
+            <Color x:Key="AppLightBlueColor">#36A8FF</Color>
+            <Color x:Key="AppLightBlueTextColor">#4AA6EC</Color>
+            <Color x:Key="AppFrameLightBlueColor">#74B9FF</Color>
+            <Color x:Key="AppSkyBlueColor">#0382E3</Color>
+            <Color x:Key="AppLightBlueCheckBoxColor">#87F8D1</Color>
+            <Color x:Key="AppDarkBlueColor">#586AC2</Color>
+            <Color x:Key="AppDotBlueColor">#55A1C3</Color>
+            <Color x:Key="AppLightBlueTextColor">#4DC1E9</Color>
+            <Color x:Key="AppMeterBlueColor">#7ED6DF</Color>
+            <Color x:Key="AppMeterDotBlueColor">#7CD6DF</Color>
+            <Color x:Key="AppPieBlueColor">#B2A7FD</Color>
+            <Color x:Key="AppHeaderBlueColor">#0080E3</Color>
 
+            <!--White-->
+            <Color x:Key="AppWhiteColor">#FFFFFF</Color>
+
+            <!--Orange Shades-->
+            <Color x:Key="AppOrangeColor">#F0932B</Color>
+            <Color x:Key="AppDarkOrangeColor">#E37100</Color>
+            <Color x:Key="AppLightOrangeColor">#F8AE87</Color>
+            <Color x:Key="AppLightOrangeTextColor">#FFC076</Color>
+            <Color x:Key="AppMeterOrangeColor">#FFBF76</Color>
+
+            <!--Violet Shades-->
+            <Color x:Key="AppVioletColor">#4834D4</Color>
+            <Color x:Key="AppLightVioletColor">#A29BFE</Color>
+
+            <!--Purple Shades-->
+            <Color x:Key="AppPurpleColor">#BE2EDD</Color>
+            <Color x:Key="AppLightPurpleColor">#6C5CE7</Color>
+
+            <!--Dark Yellow Shade-->
+            <Color x:Key="AppDarkYellowColor">#FDCB6E</Color>
+            <Color x:Key="AppYellowColor">#FFD864</Color>
+            <Color x:Key="AppLightYellowColor">#FDCB6E</Color>
+
+            <!--Pink Shades-->
+            <Color x:Key="AppPinkColor">#FD79A8</Color>
+            <Color x:Key="AppLightPinkColor">#F887DD</Color>
+
+            <!--Peach Shades-->
+            <Color x:Key="AppPeachColor">#FF7675</Color>
+            <Color x:Key="AppMeterPeachColor">#FF7676</Color>
+
+            <!--Green Shades-->
+            <Color x:Key="AppGreenColor">#00B894</Color>
+            <Color x:Key="AppLightGreenColor">#58C26D</Color>
+            <Color x:Key="AppMeterGreenColor">#BADC58</Color>
+            <Color x:Key="AppMeterDotGreenColor">#BADC58</Color>
+            <Color x:Key="AppHeaderGreenColor">#00B994</Color>
+
+            <!--Red-Brown Shades-->
+            <Color x:Key="AppBrownColor">#E27055</Color>
+            <Color x:Key="AppDarkBrownColor">#AC1717</Color>
+            <Color x:Key="AppSlightBrownColor">#E37055</Color>
+            <Color x:Key="AppLightBrownColor">#E17055</Color>
+            <Color x:Key="AppDotBrownColor">#D32E2F</Color>
+            <Color x:Key="AppDarkRedColor">#E55F5E</Color>
+            <Color x:Key="AppRedColor">#D32D2E</Color>
+            <Color x:Key="AppRedTextColor">#F92B2B</Color>
+
+
+            <!--White Black Gray Shades-->
+            <Color x:Key="AppTextBlackColor">#2D3436</Color>
+            <Color x:Key="TextGrayColor">#636E72</Color>
+            <Color x:Key="DakGrayBackgroundColor">#3D3D3D</Color>
+            <Color x:Key="LightGrayBackgroundColor">#707070</Color>
+            <Color x:Key="LightGrayColor">#F6F6F6</Color>
+            <Color x:Key="AppBlackColor">#000000</Color>
+            <Color x:Key="AppWhiteColor">#FFFFFF</Color>
+            <Color x:Key="VeryLightGrayTextColor">#C1C1C1</Color>
+            <Color x:Key="GrayTextColor">#A4A4A4</Color>
+            <!--#endregion-->
+ 
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>
