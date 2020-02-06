@@ -6,5 +6,6 @@ namespace BilBest.CustomControls
 {
     public class CustomLabel
     {
+
     }
 }

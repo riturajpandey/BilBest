@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Acr.UserDialogs;
 using Plugin.CurrentActivity;
+using PanCardView.Droid;
 
 namespace BilBest.Droid
 {
@@ -34,7 +35,7 @@ namespace BilBest.Droid
              
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true); 
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
-
+            CardsViewRenderer.Preserve();
             #endregion
 
             LoadApplication(new App());
