@@ -60,7 +60,7 @@ namespace BilBest.Droid.Renders
                     Typeface font = Typeface.CreateFromAsset(Forms.Context.Assets, "Poppins-ExtraBold.ttf");
                     label.Typeface = font;
                 }
-                if (Styleid == "PoppinsExtraBoldItalic")
+                if (Styleid == "PoppinsExtraBoldItalic")    
                 {
                     Typeface font = Typeface.CreateFromAsset(Forms.Context.Assets, "Poppins-ExtraBoldItalic.ttf");
                     label.Typeface = font;

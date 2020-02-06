@@ -100,7 +100,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renders\BorderlessTimePickerRenderer.cs" />
+    <Compile Include="Renders\CustomBorderlessDatePickerRenderer.cs" />
+    <Compile Include="Renders\CustomButtonTxtRenderer.cs" />
+    <Compile Include="Renders\CustomEditorRenderer.cs" />
+    <Compile Include="Renders\CustomEntryRenderer.cs" />
     <Compile Include="Renders\CustomLabelRenderer.cs" />
+    <Compile Include="Renders\CustomPickerRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
