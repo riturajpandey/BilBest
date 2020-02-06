@@ -5,17 +5,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BilBest.Views.Welcome.WelcomePage"
+             xmlns:controls="clr-namespace:BilBest.CustomControls"
              NavigationPage.HasNavigationBar="False">
     <!--Main Grid-->
-    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#F0932B">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppOrangeColor}" Padding="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
         <!--Set BackGround Image-->
-        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0">
             <ScrollView Grid.Row="0" IsClippedToBounds="True">
-                <Image Source="" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <controls:CustomFrame Style="{StaticResource BackgroundBlueColorFrame}" CornerRadius="0,0,80,0">
+                    
+                </controls:CustomFrame>
             </ScrollView>
         </Grid>
     </Grid>

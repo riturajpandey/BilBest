@@ -67,6 +67,7 @@
     <Compile Include="Renders\BorderlessTimePickerRenderer.cs" />
     <Compile Include="Renders\CustomEditorRenderer.cs" />
     <Compile Include="Renders\CustomEntryRenderer.cs" />
+    <Compile Include="Renders\CustomFrameRenderer.cs" />
     <Compile Include="Renders\CustomLabelRenderer.cs" />
     <Compile Include="Renders\CustomPickerRenderer.cs" />
     <None Include="Entitlements.plist" />
@@ -90,6 +91,7 @@
     <BundleResource Include="Resources\Poppins-SemiBoldItalic.ttf" />
     <BundleResource Include="Resources\Poppins-Thin.ttf" />
     <BundleResource Include="Resources\Poppins-ThinItalic.ttf" />
+    <BundleResource Include="Resources\Bilbest.rar" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -217,5 +219,221 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\medicine%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\checkmark%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drugs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drugs%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drugs%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\editbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\editbutton%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\editbutton%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse1%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse1%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse43%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse43%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse93.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse93%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse93%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse94.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse94%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse94%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\email%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\email%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\family.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\family%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\family%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Group10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Group10%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Group10%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\halfcirclebluekimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\halfcirclebluekimg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\halfcirclebluekimg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\halfcirclepinkimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\halfcirclepinkimg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\halfcirclepinkimg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imedgrayimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imedgrayimg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imedgrayimg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imedimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imedimg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imedimg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\link%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\link%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pinkframe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pinkframe%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pinkframe%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\radiounselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\radiounselected%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\radiounselected%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stretching.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stretching%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stretching%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\syringe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\syringe%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\syringe%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\upperarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\upperarrow%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\upperarrow%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\warning%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\warning%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\woman%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\woman%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\alarmclock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\alarmclock%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\alarmclock%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blueframe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blueframe%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blueframe%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\checkmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\checkmark%402x.png" />
   </ItemGroup>
 </Project>
