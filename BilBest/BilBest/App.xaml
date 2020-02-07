@@ -27,6 +27,7 @@
             <Color x:Key="AppMeterDotBlueColor">#7CD6DF</Color>
             <Color x:Key="AppPieBlueColor">#B2A7FD</Color>
             <Color x:Key="AppHeaderBlueColor">#0080E3</Color>
+            <Color x:Key="AppBorderBlueColor">#1E93EB</Color>
 
             <!--White-->
             <Color x:Key="AppWhiteColor">#FFFFFF</Color>
@@ -93,7 +94,7 @@
             <Style x:Key="PrimaryFrame" TargetType="Frame">
                 <Setter Property="BackgroundColor" Value="{StaticResource AppWhiteColor}"/> 
                 <Setter Property="Padding" Value="10,5,10,5" />
-                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="HeightRequest" Value="55" />
                 <Setter Property="CornerRadius" Value="8" />
                 <Setter Property="HasShadow" Value="False" />
                 <Setter Property="IsClippedToBounds" Value="True" />
@@ -105,7 +106,7 @@
             <Style x:Key="SecondaryFrame" TargetType="Frame">
                 <Setter Property="BackgroundColor" Value="{StaticResource AppWhiteColor}"/> 
                 <Setter Property="Padding" Value="10,0,10,0" />
-                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="HeightRequest" Value="55" />
                 <Setter Property="CornerRadius" Value="8" />
                 <Setter Property="HasShadow" Value="True" />
                 <Setter Property="IsClippedToBounds" Value="True" />
