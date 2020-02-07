@@ -10,6 +10,11 @@ namespace BilBest.ViewModels.Welcome
     public class WelcomePageVM : BaseViewModel
     {
         #region Constructor
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WelcomePageVM"/> class.
+        /// </summary>
+        /// <param name="nav"></param>
         public WelcomePageVM(INavigation nav)
         {
             Navigation = nav;

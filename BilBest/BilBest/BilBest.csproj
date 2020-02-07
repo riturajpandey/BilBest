@@ -30,11 +30,13 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="ViewModels\Account\" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Views\Accounts\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accounts\SignupFirstPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Accounts\StraightProfileSupplierPage.xaml">
