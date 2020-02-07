@@ -29,6 +29,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="20"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="20"/>
                         </Grid.RowDefinitions>  
@@ -93,13 +94,18 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <!--Link Image-->
-                            <Image Grid.Column="0" Source="link.png" VerticalOptions="CenterAndExpand" Margin="25,0,25,0"/>
-                            <Label Grid.Column="1" Text=""/>
+                            <Image Grid.Column="0" Source="link.png" VerticalOptions="CenterAndExpand" Margin="25,0,0,0"/>
+                            <Label Grid.Column="1" Text="Sihirli link oluşturarak giriş yap" Style="{StaticResource PrimaryRegularBoldLabel}" VerticalOptions="CenterAndExpand" Margin="4,0,0,0"/>
                         </Grid>
-                        
+                        <!--Text Section-->
+                        <Label Text="Kayıtlı e-posta adresine gönderilen link ile giriş yapabilirsiniz." Grid.Row="8" FontSize="10" 
+                               FontFamily="{StaticResource PoppinsRegular}" HorizontalOptions="CenterAndExpand" 
+                               VerticalOptions="CenterAndExpand" TextColor="#86CBFF" Margin="25,0,25,0"/>
                     </Grid>
                 </ScrollView>
             </controls:CustomFrame>
         </Grid>
+        <!--Label Section-->
+        <Label Grid.Row="1" Text="Yeni Üyelik" Style="{StaticResource FooterBoldLabel}"/>
     </Grid>
 </ContentPage>
