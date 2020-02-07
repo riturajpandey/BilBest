@@ -20,7 +20,7 @@ namespace BilBest
             AppSetup appSetup = new AppSetup();
             _container = appSetup.CreateContainer();
              
-            MainPage = new Views.Accounts.LoginPage();
+            MainPage = new Views.Accounts.SignupFirstPage();
         }
 
         protected override void OnStart()
