@@ -174,7 +174,8 @@
                 <Setter Property="HeightRequest" Value="45" />
                 <Setter Property="CornerRadius" Value="22" />
                 <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
-                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsSemiBold}" />
+                <Setter Property="FontSize" Value="20" />
             </Style>
  
             <!--Round Small Transparent Button--> 

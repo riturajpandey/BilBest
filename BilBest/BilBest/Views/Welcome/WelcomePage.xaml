@@ -6,6 +6,8 @@
              mc:Ignorable="d"
              x:Class="BilBest.Views.Welcome.WelcomePage"
              xmlns:controls="clr-namespace:BilBest.CustomControls"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView"
              NavigationPage.HasNavigationBar="False">
     <!--Main Grid-->
     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppOrangeColor}" Padding="0">
@@ -15,11 +17,89 @@
         </Grid.RowDefinitions>
         <!--Set BackGround Image-->
         <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0">
-            <ScrollView Grid.Row="0" IsClippedToBounds="True">
+            
                 <controls:CustomFrame Style="{StaticResource BackgroundBlueColorFrame}" CornerRadius="0,0,80,0">
-                    
-                </controls:CustomFrame>
-            </ScrollView>
+                <ScrollView Grid.Row="0" IsClippedToBounds="True">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15,30,15,15" RowSpacing="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>  
+                        <!--Set Logo-->
+                        <Image Grid.Row="0" Source="imedimg.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                        <!--Horizontal List-->
+                        <Grid Grid.Row="2">
+                            <cards:CoverFlowView x:Name="cardlistview"  PositionShiftValue="60"  ItemsSource="{Binding WelcomeList}">
+                                <x:Arguments>
+                                    <proc:BaseCoverFlowFrontViewProcessor ScaleFactor="0.80" OpacityFactor="0.25" />
+                                    <proc:BaseCoverFlowBackViewProcessor  ScaleFactor="0.80" OpacityFactor="0.25" />
+                                </x:Arguments>
+
+                                <cards:CoverFlowView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame BackgroundColor="{StaticResource LightGrayColor}" CornerRadius="15" Margin="25,0,25,0">
+                                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="1" ColumnSpacing="1">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="10"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                        <Image Source="{Binding Image}" Margin="0,15,0,0"/>
+                                                    </Grid>
+                                                    <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                        <Label Text="{Binding SubTitle}" TextColor="{StaticResource AppTextBlackColor}" 
+                                                           FontSize="20" HorizontalOptions="End" 
+                                                           FontFamily="{StaticResource PoppinsSemiBold}" Margin="10,0,30,0"/>
+                                                    </Grid>
+                                                    <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                        <Label Text="{Binding Title}" TextColor="{StaticResource AppTextBlackColor}"  FontSize="40" HorizontalOptions="EndAndExpand" 
+                                                              VerticalOptions="StartAndExpand" FontFamily="{StaticResource PoppinsBold}" TranslationY="-17"/>
+                                                    </Grid>
+                                                    <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                        <Label Text="{Binding Description}" FontSize="11" TextColor="#5A5A5A" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                                               FontFamily="{StaticResource PoppinsRegular}" TranslationY="-15"/>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
+                                        </Frame>
+                                    </DataTemplate>
+                                </cards:CoverFlowView.ItemTemplate>
+                            </cards:CoverFlowView>
+                        </Grid>
+                        <!--Kullanıcı Girişi Button Section-->
+                        <Grid Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Button Text="Kullanıcı Girişi" Style="{StaticResource SecondayButton}" BackgroundColor="{StaticResource AppLightBlueColor}" Margin="25,0,25,0"/>
+                        </Grid>
+                        <!--Boxview-->
+                        <Grid Grid.Row="5" HeightRequest="1" VerticalOptions="CenterAndExpand" BackgroundColor="#1E93EB" Margin="20,0,20,0"/>
+                        <!--Link Image And Text Section-->
+                        <Grid Grid.Row="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <!--Link Image-->
+                            <Image Grid.Column="0" Source="link.png" VerticalOptions="CenterAndExpand" Margin="25,0,25,0"/>
+                            <Label Grid.Column="1" Text=""/>
+                        </Grid>
+                        
+                    </Grid>
+                </ScrollView>
+            </controls:CustomFrame>
         </Grid>
     </Grid>
 </ContentPage>

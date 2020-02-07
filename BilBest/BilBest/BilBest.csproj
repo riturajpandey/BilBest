@@ -31,7 +31,6 @@
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="ViewModels\Account\" />
-    <Folder Include="ViewModels\Welcome\" />
   </ItemGroup>
 
   <ItemGroup>
