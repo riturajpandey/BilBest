@@ -4,15 +4,16 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BilBest.Views.Accounts.LoginPage">
+             x:Class="BilBest.Views.Accounts.LoginPage"
+             xmlns:controls="clr-namespace:BilBest.CustomControls">
     <ContentPage.Content>
         <StackLayout>
-             <!--Main Grid-->
+            <!--Main Grid-->
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,70"
                   BackgroundColor="{StaticResource AppOrangeColor}">
-                <!--<Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppBlueColor}">
-                    
-                </Frame>-->
+                <controls:CustomFrame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppBlueColor}">
+
+                </controls:CustomFrame>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
