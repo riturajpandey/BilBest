@@ -97,16 +97,20 @@
                 <Setter Property="CornerRadius" Value="8" />
                 <Setter Property="HasShadow" Value="False" />
                 <Setter Property="IsClippedToBounds" Value="True" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
 
             <!--Round White Background Shadowed Frame-->
             <Style x:Key="SecondaryFrame" TargetType="Frame">
                 <Setter Property="BackgroundColor" Value="{StaticResource AppWhiteColor}"/> 
-                <Setter Property="Padding" Value="10,5,10,5" />
-                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="Padding" Value="10,0,10,0" />
+                <Setter Property="HeightRequest" Value="60" />
                 <Setter Property="CornerRadius" Value="8" />
                 <Setter Property="HasShadow" Value="True" />
                 <Setter Property="IsClippedToBounds" Value="True" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
 
             <!--Round Big Frame-->
@@ -117,6 +121,8 @@
                 <Setter Property="CornerRadius" Value="37.5" />
                 <Setter Property="HasShadow" Value="True" />
                 <Setter Property="IsClippedToBounds" Value="True" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" /> 
             </Style>
 
             <!--Round Slight Big Frame-->
@@ -126,6 +132,8 @@
                 <Setter Property="CornerRadius" Value="30" />
                 <Setter Property="HasShadow" Value="False" />
                 <Setter Property="IsClippedToBounds" Value="True" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
 
             <!--Round Small Height Frame-->
@@ -135,6 +143,8 @@
                 <Setter Property="CornerRadius" Value="20" />
                 <Setter Property="HasShadow" Value="False" />
                 <Setter Property="IsClippedToBounds" Value="True" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
 
             <!--Round Very Small Height Frame-->
@@ -144,6 +154,8 @@
                 <Setter Property="CornerRadius" Value="17.5" />
                 <Setter Property="HasShadow" Value="False" />
                 <Setter Property="IsClippedToBounds" Value="True" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
 
             <!--Frame For Background-->
@@ -152,6 +164,8 @@
                 <Setter Property="HasShadow" Value="False" />
                 <Setter Property="IsClippedToBounds" Value="True" />
                 <Setter Property="BackgroundColor" Value="{StaticResource AppBlueColor}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
             <!--#endregion-->
 
@@ -217,6 +231,8 @@
                 <Setter Property="FontFamily" Value="{DynamicResource  PoppinsBold}" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="TextColor" Value="{StaticResource TextGrayColor}" />  
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
 
             <!--Primary White Big Headers-->
@@ -235,6 +251,35 @@
                 <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
             </Style>
 
+            <!--Primary 15 size Label-->
+            <Style x:Key="PrimaryRegularLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsRegular}" /> 
+                <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
+            </Style>
+            
+            <!--Primary 15 size Label-->
+            <Style x:Key="PrimaryRegularBoldLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsRegular}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
+            </Style>
+
+            <!--#endregion-->
+
+            <!--#region Entrys -->
+ 
+            <!--Primary Black Headers-->
+            <Style x:Key="PrimaryEntry" TargetType="Entry">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsRegular}" /> 
+                <Setter Property="TextColor" Value="{StaticResource AppTextBlackColor}" />
+                <Setter Property="PlaceholderColor" Value="{StaticResource AppTextBlackColor}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="TranslationY" Value="3" />
+            </Style>
             <!--#endregion-->
 
             <!--#endregion-->

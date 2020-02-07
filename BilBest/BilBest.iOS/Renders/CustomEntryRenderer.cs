@@ -20,7 +20,8 @@ namespace BilBest.iOS.Renders
             base.OnElementPropertyChanged(sender, e);
             if (Control != null)
             {
-                Control.BorderStyle = UITextBorderStyle.None;
+                Control.BorderStyle = UITextBorderStyle.None; 
+                Control.TintColor = UIColor.Black;
                 //  Control.Layer.CornerRadius = 10;
                 //   Control.TextColor = UIColor.White;
             }

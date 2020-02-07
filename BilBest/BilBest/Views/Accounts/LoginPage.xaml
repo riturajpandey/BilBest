@@ -4,15 +4,101 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BilBest.Views.Accounts.LoginPage">
+             x:Class="BilBest.Views.Accounts.LoginPage"
+             xmlns:inputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             xmlns:controls="clr-namespace:BilBest.CustomControls">
     <ContentPage.Content>
         <StackLayout>
-             <!--Main Grid-->
+            <!--Main Grid-->
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,70"
                   BackgroundColor="{StaticResource AppOrangeColor}">
-                <!--<Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppBlueColor}">
-                    
-                </Frame>-->
+                <controls:CustomFrame Style="{StaticResource BackgroundBlueColorFrame}" CornerRadius="0,0,80,0">
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15,30,15,15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="18*"/>
+                            <RowDefinition Height="60*"/>
+                            <RowDefinition Height="22*"/>
+                        </Grid.RowDefinitions>
+                        <!--Logo Header-->
+                        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Image Source="imedimg.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                        </Grid>
+                        
+                        <!--Login Details Section-->
+                        <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="15">
+                            <Grid.RowDefinitions> 
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!--Username-->
+                            <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/> 
+                                </Grid.RowDefinitions>
+                                <!--Header-->
+                                <Label Grid.Row="0" Text="Şifreniz" Style="{StaticResource PrimaryGrayHeaders}" TextColor="White"/>
+                                <!--Enter Username-->
+                                <Frame Grid.Row="1" Style="{StaticResource SecondaryFrame}">
+                                    <controls:CustomEntry Text="{Binding Username}" Placeholder="parola" PlaceholderColor="{StaticResource AppBlackColor}" 
+                                                          Style="{StaticResource PrimaryEntry}"/>
+                                </Frame>
+                                
+                            </Grid>
+
+                            <!--Password-->
+                            <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <!--Header-->
+                                <Label Grid.Row="0" Text="Kullanıcı Adınız" Style="{StaticResource PrimaryGrayHeaders}" TextColor="White"/>
+                                <!--Enter Username-->
+                                <Frame Grid.Row="1" Style="{StaticResource SecondaryFrame}">
+                                    <controls:CustomEntry Text="{Binding Username}" Placeholder="Kullanıcı adı" PlaceholderColor="{StaticResource AppBlackColor}" 
+                                                          Style="{StaticResource PrimaryEntry}"/>
+                                </Frame>
+
+                            </Grid>
+
+                            <!--Remeber Me and Forget Password-->
+                            <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <!--Remember Me-->
+                                <inputKit:CheckBox Grid.Column="0" Text="Beni hatırla" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"
+                                                   TextColor="{StaticResource AppWhiteColor}" TextFontSize="15" FontFamily="{StaticResource PoppinsRegular}"
+                                                   Type="Check" BoxBackgroundColor="{StaticResource AppWhiteColor}" BorderColor="{StaticResource AppWhiteColor}"
+                                                   Color="{StaticResource AppBlueColor}" BoxSizeRequest="20"/>
+
+                                <!--Header-->
+                                <Label Grid.Column="1" Text="Şifremi Unuttum?" Style="{StaticResource PrimaryRegularLabel}" 
+                                       HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                                
+                            </Grid>
+                            
+                            <!--Login Button-->
+                            <controls:CustomButtonTxt Grid.Row="3" Text="Giriş Yap" Style="{StaticResource SecondayButton}"
+                                                      FontSize="20" BackgroundColor="{StaticResource AppLightBlueColor}" Margin="35,0,35,0"/>
+                        </Grid>
+                    </Grid>
+                    </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </controls:CustomFrame>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
