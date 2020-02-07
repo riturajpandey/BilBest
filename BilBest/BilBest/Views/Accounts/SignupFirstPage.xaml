@@ -129,6 +129,9 @@
                                 <Frame Grid.Row="2" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" Style="{StaticResource SmallHeightFrame}" 
                                        BackgroundColor="{StaticResource AppOrangeColor}">
                                     <Grid HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="15,0,0,0">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding SignupFirstPageVM}"/>
+                                        </Grid.GestureRecognizers>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="60"/>
                                             <ColumnDefinition Width="30"/>
