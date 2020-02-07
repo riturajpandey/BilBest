@@ -28,6 +28,7 @@
             <Color x:Key="AppPieBlueColor">#B2A7FD</Color>
             <Color x:Key="AppHeaderBlueColor">#0080E3</Color>
             <Color x:Key="AppBorderBlueColor">#1E93EB</Color>
+            <Color x:Key="AppSlightLightBlueColor">#86CBFF</Color>
 
             <!--White-->
             <Color x:Key="AppWhiteColor">#FFFFFF</Color>
