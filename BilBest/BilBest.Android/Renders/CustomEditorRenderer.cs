@@ -35,6 +35,12 @@ namespace BilBest.Droid.Renders
             if (Control != null)
             {
                 Control.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
+
+                // set the cursor color the same as the entry TextColor
+                IntPtr IntPtrtextViewClass = JNIEnv.FindClass(typeof(TextView));
+                IntPtr mCursorDrawableResProperty =
+                JNIEnv.GetFieldID(IntPtrtextViewClass, "mCursorDrawableRes", "I");
+                JNIEnv.SetField(Control.Handle, mCursorDrawableResProperty, 0);
             }
         }
         #endregion
