@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BilBest.Views.Accounts.StraightProfileSupplierPage"
+             xmlns:controls="clr-namespace:BilBest.CustomControls">
+    <!--Main Grid-->
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppWhiteColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="230"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--My Profile , Edit and Profile Image Section-->
+        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110"/>
+                <RowDefinition Height="120"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppBlueColor}"  Padding="15" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Back Image Section-->
+                <Image Grid.Column="0" Source="backarrow.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="0,4,0,0"/>
+                <!--My Profile Text-->
+                <Label Grid.Column="1" Text="Profilim" Style="{StaticResource BackRegularLabel}" Margin="10,0,0,0"/>
+               
+            </Grid>
+            <!--Düzenle Label Section-->
+            <Label Grid.Row="0" Text="Düzenle" Style="{StaticResource PrimaryBigWhiteHeaders}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="15,0,0,0"/>
+            <!--Profile Image Section-->
+            <Image Grid.Row="1" Source="Ellipse1.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" HeightRequest="100" WidthRequest="100" TranslationY="-60"/>
+            <!--Fotoğraf Yükle Section-->
+            <Label Grid.Row="1" Text="Fotoğraf Yükle" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="12" FontFamily="{StaticResource PoppinsRegular}" FontAttributes="Bold" TextColor="{StaticResource AppBlueColor}"/>
+        </Grid>
+        <!--Entry And Text Section-->
+            <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                    <!--Adınız Soyadınız Label Section-->
+                    <Label Grid.Row="0" Text="Adınız Soyadınız" Style="{StaticResource PrimaryGrayHeaders}"/>
+                    <!--Adınız Soyadınız Entry Section-->
+                    <Frame Grid.Row="1" Padding="0" Style="{StaticResource SecondaryFrame}">
+                      <controls:CustomEntry Text="Ahmet Kaplan" Style="{StaticResource PrimaryEntry}" Margin="10,0,0,0"/>
+                    </Frame>
+                <!--Doğum Tarihiniz Label Section-->
+                <Label Grid.Row="3" Text="Doğum Tarihiniz" Style="{StaticResource PrimaryGrayHeaders}"/>
+                <!--Adınız Soyadınız Entry Section-->
+                <Frame Grid.Row="4" Padding="0" Style="{StaticResource SecondaryFrame}">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                        </Grid.ColumnDefinitions>
+                        <!--Date Section-->
+                        <Label Grid.Column="0" Text="23 Haziran 1987" Style="{StaticResource PrimaryLabel}" Margin="10,0,0,0"/>
+                        <!--Calender Image-->
+                        <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Image Source="calendar.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <controls:CustomBorderlessDatePicker/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                <!--Telefon Numaranız Label Section-->
+                <Label Grid.Row="6" Text="Telefon Numaranız" Style="{StaticResource PrimaryGrayHeaders}"/>
+                <!--Telefon Numaranız Entry Section-->
+                <Frame Grid.Row="7" Padding="0" Style="{StaticResource SecondaryFrame}">
+                    <controls:CustomEntry Text="0532 458 45 45" Style="{StaticResource PrimaryEntry}" Margin="10,0,0,0"/>
+                </Frame>
+                <!--Boyunuz,Kilonuz,Kan Grubu Label Section-->
+                <Grid Grid.Row="9" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Boyunuz-->
+                    <Label Grid.Column="0" Text="Boyunuz" Style="{StaticResource PrimaryGrayHeaders}"/>
+                    <!--Kilonuz-->
+                    <Label Grid.Column="1" Text="Kilonuz" Style="{StaticResource PrimaryGrayHeaders}"/>
+                    <!--Kan Grubu-->
+                    <Label Grid.Column="2" Text="Kan Grubu" Style="{StaticResource PrimaryGrayHeaders}"/>
+                </Grid>
+                <!--Boyunuz,Kilonuz,Kan Grubu Entry And Picker Section-->
+                <Grid Grid.Row="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>   
+                    <!--Boyunuz Entry Section-->
+                    <Frame Grid.Column="0" Padding="0" Style="{StaticResource SecondaryFrame}">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <controls:CustomEntry Text="174" Margin="10,0,30,0"/>
+                            <Label Text="cm" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" FontSize="15" 
+                                   FontFamily="{StaticResource PoppinsItalic}" Margin="0,0,10,0" TextColor="{StaticResource DarkGrayTextColor}" TranslationY="2"/>
+                        </Grid>
+                    </Frame>
+                    <!--Kilonuz Entry Section-->
+                    <Frame Grid.Column="1" Padding="0" Style="{StaticResource SecondaryFrame}">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <controls:CustomEntry Text="84" Margin="10,0,30,0"/>
+                            <Label Text="kg" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" FontSize="15" 
+                                   FontFamily="{StaticResource PoppinsItalic}" Margin="0,0,10,0" TextColor="{StaticResource DarkGrayTextColor}" TranslationY="2"/>
+                        </Grid>
+                    </Frame>
+                    <!--Kan Grubu Entry Section-->
+                    <Frame Grid.Column="2" Padding="0" Style="{StaticResource SecondaryFrame}">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <controls:CustomEntry Text="AB Rh+" Margin="10,0,30,0"/>
+                            <Image Source="arrowdown.png" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,10,0"/>
+                        </Grid>
+                    </Frame>
+                </Grid>
+                <!--E-Posta Adresiniz Label Section-->
+                <Label Grid.Row="12" Text="E-Posta Adresiniz" Style="{StaticResource PrimaryGrayHeaders}"/>
+                <!--E-Posta Adresiniz Entry Section-->
+                <Frame Grid.Row="13" Padding="0" Style="{StaticResource SecondaryFrame}">
+                    <controls:CustomEntry Text="0532 458 45 45" Style="{StaticResource PrimaryEntry}" Margin="10,0,10,0"/>
+                </Frame>
+                <!--Sigorta İşlemleri Section-->
+                <Frame Grid.Row="15" Padding="0" Style="{StaticResource SecondaryFrame}">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                        </Grid.ColumnDefinitions>
+                        <!--Date Section-->
+                        <Label Grid.Column="0" Text="Sigorta İşlemleri" FontSize="15" FontFamily="{StaticResource PoppinsMedium}" TextColor="{StaticResource AppTextBlackColor}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="10,0,10,0"/>
+                        <!--Calender Image-->
+                        <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Image Source="rightarrow.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                <!--Şifre İşlemleri Section-->
+                <Frame Grid.Row="17" Padding="0" Style="{StaticResource SecondaryFrame}">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                        </Grid.ColumnDefinitions>
+                        <!--Date Section-->
+                        <Label Grid.Column="0" Text="Şifre İşlemleri" FontSize="15" FontFamily="{StaticResource PoppinsMedium}" TextColor="{StaticResource AppTextBlackColor}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="10,0,10,0"/>
+                        <!--Calender Image-->
+                        <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Image Source="rightarrow.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+                <!--Button Section-->
+                <controls:CustomButtonTxt Grid.Row="19" Text="Kaydet" Style="{StaticResource BluBoldButton}"/>
+                <!--İptal Label Section-->
+                <Label Grid.Row="21" Text="İptal" Style="{StaticResource İptalTextStyles}"/>
+            </Grid>
+            </ScrollView>
+    </Grid>
+</ContentPage>

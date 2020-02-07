@@ -24,7 +24,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="15"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="330"/>
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="40"/>
@@ -52,9 +52,9 @@
                                                 </Grid.RowDefinitions>
                                                 <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="1" ColumnSpacing="1">
                                                     <Grid.RowDefinitions>
-                                                        <RowDefinition Height="Auto"/>
-                                                        <RowDefinition Height="Auto"/>
-                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="150"/>
+                                                        <RowDefinition Height="30"/>
+                                                        <RowDefinition Height="50"/>
                                                         <RowDefinition Height="Auto"/>
                                                         <RowDefinition Height="10"/>
                                                     </Grid.RowDefinitions>
@@ -67,12 +67,12 @@
                                                            FontFamily="{StaticResource PoppinsSemiBold}" Margin="10,0,30,0"/>
                                                     </Grid>
                                                     <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                                                        <Label Text="{Binding Title}" TextColor="{StaticResource AppTextBlackColor}"  FontSize="40" HorizontalOptions="EndAndExpand" 
-                                                              VerticalOptions="StartAndExpand" FontFamily="{StaticResource PoppinsBold}" TranslationY="-17"/>
+                                                        <Label Text="{Binding Title}" TextColor="{StaticResource AppTextBlackColor}"  FontSize="30" HorizontalOptions="EndAndExpand" 
+                                                              VerticalOptions="StartAndExpand" FontFamily="{StaticResource PoppinsBold}" TranslationY="-10"/>
                                                     </Grid>
-                                                    <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                    <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
                                                         <Label Text="{Binding Description}" FontSize="11" TextColor="#5A5A5A" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-                                                               FontFamily="{StaticResource PoppinsRegular}" TranslationY="-15"/>
+                                                               FontFamily="{StaticResource PoppinsRegular}" TranslationY="-14"/>
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
@@ -83,7 +83,7 @@
                         </Grid>
                         <!--Kullanıcı Girişi Button Section-->
                         <Grid Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                            <Button Text="Kullanıcı Girişi" Style="{StaticResource SecondayButton}" BackgroundColor="{StaticResource AppLightBlueColor}" Margin="25,0,25,0"/>
+                            <controls:CustomButtonTxt Text="Kullanıcı Girişi" Style="{StaticResource SecondayButton}" BackgroundColor="{StaticResource AppLightBlueColor}" Margin="25,0,25,0"/>
                         </Grid>
                         <!--Boxview-->
                         <Grid Grid.Row="5" HeightRequest="1" VerticalOptions="CenterAndExpand" BackgroundColor="#1E93EB" Margin="20,0,20,0"/>
@@ -95,12 +95,12 @@
                             </Grid.ColumnDefinitions>
                             <!--Link Image-->
                             <Image Grid.Column="0" Source="link.png" VerticalOptions="CenterAndExpand" Margin="25,0,0,0"/>
-                            <Label Grid.Column="1" Text="Sihirli link oluşturarak giriş yap" Style="{StaticResource PrimaryRegularBoldLabel}" VerticalOptions="CenterAndExpand" Margin="4,0,0,0"/>
+                            <Label Grid.Column="1" Text="Sihirli link oluşturarak giriş yap" Style="{StaticResource PrimaryRegularBoldLabel}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="4,0,0,0"/>
                         </Grid>
                         <!--Text Section-->
                         <Label Text="Kayıtlı e-posta adresine gönderilen link ile giriş yapabilirsiniz." Grid.Row="8" FontSize="10" 
-                               FontFamily="{StaticResource PoppinsRegular}" HorizontalOptions="CenterAndExpand" 
-                               VerticalOptions="CenterAndExpand" TextColor="#86CBFF" Margin="25,0,25,0"/>
+                               FontFamily="{StaticResource PoppinsRegular}"
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#86CBFF" Margin="25,0,25,0"/>
                     </Grid>
                 </ScrollView>
             </controls:CustomFrame>
