@@ -189,7 +189,8 @@
                 <Setter Property="HeightRequest" Value="45" />
                 <Setter Property="CornerRadius" Value="22" />
                 <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
-                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsSemiBold}" />
+                <Setter Property="FontSize" Value="20" />
             </Style>
  
             <!--Round Small Transparent Button--> 
@@ -261,11 +262,21 @@
             <!--Primary 15 size Label-->
             <Style x:Key="PrimaryRegularBoldLabel" TargetType="Label">
                 <Setter Property="FontSize" Value="15" />
-                <Setter Property="FontFamily" Value="{DynamicResource PoppinsRegular}" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsSemiBold}" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
             </Style>
 
+            <!--Footer For All The Screens-->
+            <Style x:Key="FooterBoldLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsBold}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource AppWhiteColor}" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+            
             <!--#endregion-->
 
             <!--#region Entrys -->
