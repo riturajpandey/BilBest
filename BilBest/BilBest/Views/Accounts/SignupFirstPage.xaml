@@ -15,7 +15,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="70"/>
             </Grid.RowDefinitions>
-            <controls:CustomFrame Grid.Row="0" Style="{StaticResource BackgroundBlueColorFrame}" BackgroundColor="{StaticResource AppWhiteColor}" CornerRadius="0,0,80,0">
+            <controls:CustomFrame Grid.Row="0" Style="{StaticResource BackgroundBlueColorFrame}" BackgroundColor="{StaticResource LightGrayColor}" CornerRadius="0,0,80,0">
                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,20">
                     <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
                         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -130,7 +130,7 @@
                                        BackgroundColor="{StaticResource AppOrangeColor}">
                                     <Grid HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="15,0,0,0">
                                         <Grid.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding SignupFirstPageVM}"/>
+                                            <TapGestureRecognizer Command="{Binding ProceedCommand}"/>
                                         </Grid.GestureRecognizers>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="60"/>
@@ -138,7 +138,7 @@
                                         </Grid.ColumnDefinitions>
                                         <Label Grid.Column="0" FontFamily="{StaticResource PoppinsSemiBold}" FontSize="13" Text="İlerle" TextColor="{StaticResource AppWhiteColor}"
                                                VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Margin="0,3,0,0"/>
-                                        <Image Grid.Column="1" Source="alarmclock.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                                        <Image Grid.Column="1" Source="leftarrow.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
                                     </Grid>
                                 </Frame> 
                             </Grid>

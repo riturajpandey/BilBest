@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BilBest.Views.Package.PackageSecondPage"
+             xmlns:inputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             xmlns:controls="clr-namespace:BilBest.CustomControls"
+             xmlns:suave="clr-namespace:SuaveControls.DynamicStackLayout;assembly=SuaveControls.DynamicStackLayout"
+             xmlns:carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions">
+    <ContentPage.Content>
+        <!--Main Grid-->
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0"
+                  BackgroundColor="{StaticResource LightGrayColor}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15,30,15,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="120"/>
+                    </Grid.RowDefinitions>
+                    <!--Logo Header-->
+                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="imedgrayimg.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    </Grid>
+
+                    <!-- Details Section-->
+                    <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="350"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Text="Kullanım şeklinizi seçin" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource TextGrayColor}" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Row="1" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis lectus vitae metus blandit laoreet. Proin non metus venenatis, ultricies tellus sed" 
+                                           Style="{StaticResource PrimaryMediumSmallLabel}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+
+                        <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <!--Package List-->
+                            <carousel:CarouselViewControl Grid.Row="0" x:Name="LvPackages" BackgroundColor="Transparent" PositionSelected="Carousel_PositionSelected" Orientation="Horizontal"
+                                          ItemsSource="{Binding PackageList}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <carousel:CarouselViewControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" IsClippedToBounds="True"
+                                               BackgroundColor="{StaticResource AppWhiteColor}" CornerRadius="15">
+                                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" RowSpacing="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="45*"/>
+                                                    <RowDefinition Height="55*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+                                                    <Image Aspect="Fill" Source="{Binding PkgImage}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*"/>
+                                                            <RowDefinition Height="2"/>
+                                                            <RowDefinition Height="*"/>
+                                                        </Grid.RowDefinitions>
+                                                        <Label Grid.Row="0" Text="{Binding Title}" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource AppWhiteColor}" 
+                                                           VerticalOptions="EndAndExpand" FontSize="22" HorizontalTextAlignment="Start"/>
+
+                                                        <BoxView Grid.Row="1" HeightRequest="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                                                                 BackgroundColor="{StaticResource AppWhiteColor}" Margin="40,0,40,0" Opacity="0.5"/>
+                                                        
+                                                        <!--Details-->
+                                                        <Grid Grid.Row="2" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="Auto"/>
+                                                                <RowDefinition Height="Auto"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="10" Margin="0,-4,0,0">
+                                                                <Label Text="{Binding Amount}" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource AppWhiteColor}" 
+                                                                       VerticalOptions="CenterAndExpand" FontSize="20" HorizontalTextAlignment="End"/>
+                                                            </Grid>
+                                                            <Label Grid.Row="1" Text="{Binding AmountText}" Style="{StaticResource PrimaryRegularSmallLabel}"
+                                                           VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" TextColor="{StaticResource AppWhiteColor}"/>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
+                                        </Frame>
+                                    </DataTemplate>
+                                </carousel:CarouselViewControl.ItemTemplate>
+                            </carousel:CarouselViewControl>
+                            <!--Indicator List-->
+                            <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <suave:DynamicStackLayout x:Name="LvIndicators" ItemsSource="{Binding IndicatorList}" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                        <suave:DynamicStackLayout.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="0" Margin="2,0,2,0" BackgroundColor="Transparent">
+                                                    <Image x:Name="imgFirst" Source="circle.png"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsCurrent}" HeightRequest="20" WidthRequest="20"/>
+                                                    <Image x:Name="imgSecond" Source="border_circle.png"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsNotCurrent}" HeightRequest="20" WidthRequest="20"/>
+                                                </StackLayout>
+                                            </DataTemplate>
+                                        </suave:DynamicStackLayout.ItemTemplate>
+                                    </suave:DynamicStackLayout>
+                                </ScrollView>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    <!--Footer Section-->
+                    <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="5,0,5,0" RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Style="{StaticResource BluBoldButton}" Text="Paketi Seç" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppOrangeColor}"/>
+                        <Label Grid.Row="1" Style="{StaticResource İptalTextStyles}" Text="Geri" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

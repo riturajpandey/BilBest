@@ -12,19 +12,19 @@ using Xamarin.Forms.Xaml;
 namespace BilBest.Views.Accounts
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SignupFirstPage : ContentPage
-    {
+    public partial class SignUpSecondPage : ContentPage
+    { 
         //TODO : To Define class Level Variables...
-        SignupFirstPageVM SignUpVM;
+        SignupSecondVM SignUpVM;
 
-        public SignupFirstPage()
+        public SignUpSecondPage()
         {
             InitializeComponent();
-            SignUpVM = new SignupFirstPageVM(this.Navigation);
+            SignUpVM = new SignupSecondVM(this.Navigation);
             this.BindingContext = SignUpVM;
 
             // iOS Platform
             On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
-        }
+        } 
     }
 }
