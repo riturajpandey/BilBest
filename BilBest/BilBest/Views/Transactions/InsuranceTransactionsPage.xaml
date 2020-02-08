@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BilBest.Views.Transactions.InsuranceTransactionsPage"
+             xmlns:controls="clr-namespace:BilBest.CustomControls"
+             NavigationPage.HasNavigationBar="False">
+    <!--Main Grid-->
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource LightGrayColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--My Profile , Edit Section-->
+        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppBlueColor}"  Padding="15" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Back Image Section-->
+                <Image Grid.Column="0" Source="backarrow.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="0,4,0,0"/>
+                <!--Profili Düzenle Text-->
+                <Label Grid.Column="1" Text="Profili Düzenle" Style="{StaticResource BackRegularLabel}" Margin="10,0,0,0" />
+
+            </Grid>
+            <!--Düzenle Label Section-->
+            <Label Grid.Row="0" Text="Şifre İşlemleri" Style="{StaticResource PrimaryBigWhiteHeaders}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="15,0,0,0" TranslationY="10"/>
+            <!--Profile Image Section-->
+        </Grid>
+        <!--Entry And Text Section-->
+        <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!--Güncel şifrenizi giriniz Label Section-->
+                <Label Grid.Row="0" Text="Güncel şifrenizi giriniz" Style="{StaticResource PrimaryGrayHeaders}"/>
+                <!--Güncel şifrenizi giriniz Entry Section-->
+                <Frame Grid.Row="1" Padding="0" Style="{StaticResource SecondaryFrame}">
+                    <controls:CustomEntry Style="{StaticResource PrimaryEntry}" Margin="10,0,10,0"/>
+                </Frame>
+                <!--Border-->
+                <Grid Grid.Row="2"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <BoxView HeightRequest="1"  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="{StaticResource GrayBorderColor}"/>
+                </Grid>
+                <!--Yeni Şifreniz Label Section-->
+                <Label Grid.Row="3" Text="Yeni Şifreniz" Style="{StaticResource PrimaryGrayHeaders}"/>
+                <!--Yeni Şifreniz Entry Section-->
+                <Frame Grid.Row="4" Padding="0" Style="{StaticResource SecondaryFrame}">
+                    <controls:CustomEntry Style="{StaticResource PrimaryEntry}" Margin="10,0,10,0"/>
+                </Frame>
+                <!--Yeni Şifreniz (Tekrar) Label Section-->
+                <Label Grid.Row="6" Text="Sigorta Kapsamı" Style="{StaticResource PrimaryGrayHeaders}"/>
+                <!--Yeni Şifreniz (Tekrar) Entry Section-->
+                <Frame Grid.Row="7" Padding="0" Style="{StaticResource SecondaryFrame}">
+                    <controls:CustomEntry Style="{StaticResource PrimaryEntry}" Margin="10,0,10,0"/>
+                </Frame>
+                <!--Label Section-->
+                <Label Grid.Row="9" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis lectus vitae metus blandit laoreet."
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="12" TextColor="{StaticResource TextGrayColor}" FontFamily="{StaticResource PoppinsMedium}"/>
+                <!--Button Section-->
+                <controls:CustomButtonTxt Grid.Row="11" Text="Bilgileri Kaydet" Style="{StaticResource BluBoldButton}"/>
+                <!--İptal Label Section-->
+                <Label Grid.Row="13" Text="İptal" Style="{StaticResource İptalTextStyles}"/>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

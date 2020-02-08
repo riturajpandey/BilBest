@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BilBest.Views.Health.HealthRecommendations"
+             xmlns:controls="clr-namespace:BilBest.CustomControls">
+    <!--Main Grid-->
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource LightGrayColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--My Profile , Edit Section-->
+        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YellowColor}"  Padding="15" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Back Image Section-->
+                <Image Grid.Column="0" Source="blackleftarrow.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="0,4,0,0"/>
+                <!--Profili Text-->
+                <Label Grid.Column="1" Text="Profilim" Style="{StaticResource BackRegularLabel}" TextColor="{StaticResource AppTextBlackColor}" Margin="10,0,0,0" />
+
+            </Grid>
+            <!--Sağlık Önerileri Label Section-->
+            <Label Grid.Row="0" Text="Sağlık Önerileri" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource AppTextBlackColor}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="15,0,0,0" TranslationY="10"/>
+            <!--Warning Image-->
+            <Image Grid.Row="0" Source="warning.png" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,15,0" TranslationY="4"/>
+            <!--Profile Image Section-->
+        </Grid>
+        <!--Entry And Text Section-->
+        <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True" VerticalScrollBarVisibility="Never">
+            <controls:RepeaterView ItemsSource="{Binding HealthRecommendationsList}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <controls:RepeaterView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="{StaticResource AppWhiteColor}" CornerRadius="15" Padding="0" Margin="15" IsClippedToBounds="True">
+                                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <!--Yellow Section-->
+                                    <Grid Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YellowColor}"/>
+                                    <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="10"/>
+                                        </Grid.RowDefinitions>
+                                        <!--Image Section-->
+                                        <Image Grid.Row="0" Source="{Binding Image}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                        <!--Title Section-->
+                                        <Label Grid.Row="1" Text="{Binding Title}" Style="{StaticResource PrimaryGrayHeaders}" TextColor="{StaticResource AppTextBlackColor}" Margin="10,10,10,0"/>
+                                        <!--Desctiption Section-->
+                                        <Label Grid.Row="2" Text="{Binding Description}" TextColor="{StaticResource AppLightGrayColor}" FontSize="13" FontFamily="{StaticResource PoppinsRegular}" Margin="10,10,10,0" HorizontalOptions="StartAndExpand"/>
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </controls:RepeaterView.ItemTemplate>
+            </controls:RepeaterView>
+        </ScrollView>
+    </Grid>
+</ContentPage>
