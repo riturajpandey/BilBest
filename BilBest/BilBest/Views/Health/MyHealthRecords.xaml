@@ -6,11 +6,12 @@
              mc:Ignorable="d"
              x:Class="BilBest.Views.Health.MyHealthRecords"
              xmlns:Ci="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             xmlns:controls="clr-namespace:BilBest.CustomControls">
+             xmlns:controls="clr-namespace:BilBest.CustomControls"
+             xmlns:suave="clr-namespace:SuaveControls.DynamicStackLayout;assembly=SuaveControls.DynamicStackLayout">
     <!--Main Grid-->
     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource LightGrayColor}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="152"/>
+            <RowDefinition Height="170"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
@@ -36,21 +37,51 @@
                     <Label Grid.Column="1" Text="Profilim" Style="{StaticResource BackRegularLabel}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TranslationY="2"/>
                 </Grid>
                 <!--Sağlık Kayıtlarım Text-->
-                <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TranslationY="-5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="30"/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Text="Sağlık Kayıtlarım" Style="{StaticResource PrimaryBigWhiteHeaders}" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="End"/>
                     <!--Search Image Section-->
-                    <Frame Grid.Column="1" CornerRadius="25" HeightRequest="40" WidthRequest="40" BackgroundColor="White"  
-                           Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" IsClippedToBounds="True">
+                    <Frame Grid.Column="1" CornerRadius="25" HeightRequest="30" WidthRequest="30" BackgroundColor="White"  
+                           Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" IsClippedToBounds="True" TranslationY="-8">
                         <Image Source="search.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                     </Frame>
-                    
+
                 </Grid>
             </Grid>
-            
+            <!--Horizontal Listview-->
+            <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalScrollBarVisibility="Never">
+                    <suave:DynamicStackLayout ItemsSource="{Binding HorizontalListData}" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <suave:DynamicStackLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Grid HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,0" Margin="0,0,3,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+                                    <!--Item-->
+                                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" >
+                                        
+                                        <Frame HasShadow="False" CornerRadius="20" Padding="15,0,15,0"  HeightRequest="40" BackgroundColor="{Binding BackgroudColor}">
+                                            <Label Text="{Binding Name}" TextColor="{StaticResource AppTextBlackColor}" FontSize="12" 
+                                                   FontFamily="{StaticResource PoppinsMedium}"  HorizontalTextAlignment="Start"  
+                                                   VerticalTextAlignment="Center"/>
+                                        </Frame>
+                                        <Frame HasShadow="False" HeightRequest="30" WidthRequest="30" CornerRadius="20" Padding="0" BackgroundColor="White" IsVisible="{Binding Isvisible}"
+                                               VerticalOptions="Start" HorizontalOptions="End" Margin="0,-20,-5,0">
+                                            <Label Text="3" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                        </Frame>
+                                    </Grid>
+                                   
+                                </Grid>
+                            </DataTemplate>
+                        </suave:DynamicStackLayout.ItemTemplate>
+                    </suave:DynamicStackLayout>
+                </ScrollView>
+
+            </Grid>
         </Grid>
         <!--Details Section-->
         <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
