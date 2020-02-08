@@ -19,6 +19,12 @@ namespace BilBest.ViewModels.Health
                 new DummyMyHealthRecordsModel{Tarih="10.08.2019",Gönderen="Sağlık Kurumu",Dosya="Laboratuvar Sonuçları"},
                 new DummyMyHealthRecordsModel{Tarih="10.08.2019",Gönderen="Kullanıcı",Dosya="Laboratuvar Sonuçları"},
             };
+            HorizontalListData = new ObservableCollection<HorizontalListData>
+            {
+                new HorizontalListData{Name="Gelen Kutusu",BackgroudColor="#FDCB6E",Isvisible=true},
+                new HorizontalListData{Name="Epikrizlerim",BackgroudColor="#FFFFFF",Isvisible=false},
+                new HorizontalListData{Name="Laboratuvar Sonuçlarım",BackgroudColor="#FFFFFF",Isvisible=false},
+            };
         }
         #endregion
 
@@ -36,6 +42,20 @@ namespace BilBest.ViewModels.Health
                 }
             }
         }
+        private ObservableCollection<HorizontalListData> _HorizontalListData;
+        public ObservableCollection<HorizontalListData> HorizontalListData
+        {
+            get { return _HorizontalListData; }
+            set
+            {
+                if (_HorizontalListData != value)
+                {
+                    _HorizontalListData = value;
+                    OnPropertyChanged("HorizontalListData");
+                }
+            }
+        }
+        
         #endregion      
     }
 }

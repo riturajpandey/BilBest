@@ -21,6 +21,7 @@ namespace BilBest.Views.Health
             InitializeComponent();
             MyHealthRecordsVM = new MyHealthRecordsVM(this.Navigation);
             BindingContext = MyHealthRecordsVM;
+            var data = Color.FromHex(Application.Current.Resources["AppBlueColor"].ToString());
         } 
         #endregion
     }

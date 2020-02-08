@@ -20,7 +20,7 @@ namespace BilBest
             AppSetup appSetup = new AppSetup();
             _container = appSetup.CreateContainer();
              
-            MainPage = new NavigationPage(new Views.Package.PackageSecondPage());
+            MainPage = new Views.Health.EpicrisisReport();
         }
 
         protected override void OnStart()
