@@ -9,6 +9,7 @@ using Android.OS;
 using Acr.UserDialogs;
 using Plugin.CurrentActivity;
 using PanCardView.Droid;
+using CarouselView.FormsPlugin.Android;
 
 namespace BilBest.Droid
 {
@@ -25,6 +26,7 @@ namespace BilBest.Droid
             #region Initializing Packages 
 
             UserDialogs.Init(this);
+            CarouselViewRenderer.Init();
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 

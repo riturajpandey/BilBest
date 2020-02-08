@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:inputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             xmlns:controls="clr-namespace:BilBest.CustomControls"
+             x:Class="BilBest.Views.Accounts.SignUpSecondPage">
+    <ContentPage.Content>
+        <!--Main Grid-->
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0"
+                  BackgroundColor="{StaticResource AppSkyBlueColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <controls:CustomFrame Grid.Row="0" Style="{StaticResource BackgroundBlueColorFrame}" BackgroundColor="{StaticResource LightGrayColor}" CornerRadius="0,0,80,0">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,20">
+                    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
+                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15,30,15,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <!--Logo Header-->
+                                <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="imedgrayimg.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                </Grid>
+
+                                <!--Login Details Section-->
+                                <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="15" Margin="0,0,0,30">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/> 
+                                    </Grid.RowDefinitions>
+
+                                    <!--Password-->
+                                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <!--Header-->
+                                        <Label Grid.Row="0" Text="Adınız Soyadınız" Style="{StaticResource PrimaryGrayHeaders}" />
+                                        <!--Enter Password-->
+                                        <Frame Grid.Row="1" Style="{StaticResource SecondaryFrame}">
+                                            <controls:CustomEntry Text="{Binding Password}" Placeholder="parola" PlaceholderColor="{StaticResource AppBlackColor}" 
+                                                          Style="{StaticResource PrimaryEntry}" IsPassword="True"/>
+                                        </Frame> 
+                                    </Grid>
+
+                                    <!--Confirm Password-->
+                                    <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <!--Header-->
+                                        <Label Grid.Row="0" Text="E-posta Adresiniz" Style="{StaticResource PrimaryGrayHeaders}"/>
+                                        <!--Enter ConfirmPassword-->
+                                        <Frame Grid.Row="1" Style="{StaticResource SecondaryFrame}">
+                                            <controls:CustomEntry Text="{Binding ConfirmPassword}" Placeholder="E-posta" PlaceholderColor="{StaticResource AppBlackColor}" 
+                                                          Style="{StaticResource PrimaryEntry}" IsPassword="True"/>
+                                        </Frame>
+
+                                    </Grid>
+
+                                    <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="-10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <!--Condition 1-->
+                                    <inputKit:CheckBox Grid.Row="0" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis lectus vitae metus blandit laoreet. Proin non metus venenatis, ultricies tellus sed" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                                   TextColor="{StaticResource TextGrayColor}" TextFontSize="12" FontFamily="{StaticResource PoppinsMedium}"
+                                                   Type="Check" BoxBackgroundColor="{StaticResource AppWhiteColor}" BorderColor="{StaticResource AppWhiteColor}"
+                                                   Color="{StaticResource AppDarkYellowColor}" BoxSizeRequest="20" IsChecked="{Binding Condition1}"/>
+                                  
+                                        <!--Condition 2-->
+                                    <inputKit:CheckBox Grid.Row="1" Text="Vestibulum sit amet lectus eget turpis dignissim tristique. Maecenas ac felis eget urna pharetra auctor." HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                                   TextColor="{StaticResource TextGrayColor}" TextFontSize="12" FontFamily="{StaticResource PoppinsMedium}"
+                                                   Type="Check" BoxBackgroundColor="{StaticResource AppWhiteColor}" BorderColor="{StaticResource AppWhiteColor}"
+                                                   Color="{StaticResource AppDarkYellowColor}" BoxSizeRequest="20" IsChecked="{Binding Condition2}"/>
+                                    
+                                    <!--Privacy Policy--> 
+                                    <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <inputKit:CheckBox Grid.Column="0" Text="I've read and accept the " HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                                                   TextColor="{StaticResource TextGrayColor}" TextFontSize="12" FontFamily="{StaticResource PoppinsMedium}"
+                                                   Type="Check" BoxBackgroundColor="{StaticResource AppWhiteColor}" BorderColor="{StaticResource AppWhiteColor}"
+                                                   Color="{StaticResource AppDarkYellowColor}" BoxSizeRequest="20" IsChecked="{Binding PrivacyPolicy}"/>
+                                        <Label Grid.Column="1" FontFamily="{StaticResource PoppinsSemiBold}" FontSize="12" Text="Privacy Policy" TextDecorations="Underline" TextColor="{StaticResource TextGrayColor}"
+                                               VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+
+                                    </Grid>
+                                   
+                                    </Grid>
+                                </Grid>
+
+                                <!--Footer Section-->
+                                <Grid Grid.Row="2" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Frame Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" Style="{StaticResource VerySmallHeightFrame}" 
+                                       BackgroundColor="{StaticResource AppWhiteColor}" BorderColor="{StaticResource GrayIptalTextColor}" Padding="15,0,15,0">
+                                        <Grid HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="10,0,10,0">
+                                            <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                                            </Grid.GestureRecognizers> 
+                                            <Label Grid.Column="0" FontFamily="{StaticResource PoppinsSemiBold}" FontSize="13" Text="Geri" TextColor="{StaticResource TextGrayColor}"
+                                               VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Margin="0,3,0,0"/>
+                                        </Grid>
+                                    </Frame>
+
+                                    <Frame Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" Style="{StaticResource SmallHeightFrame}" 
+                                       BackgroundColor="{StaticResource AppOrangeColor}">
+                                        <Grid HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="15,0,0,0">
+                                            <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding ProceedCommand}"/>
+                                            </Grid.GestureRecognizers>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="30"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" FontFamily="{StaticResource PoppinsSemiBold}" FontSize="13" Text="Paket Seçimi" TextColor="{StaticResource AppWhiteColor}"
+                                               VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Margin="0,3,15,0"/>
+                                            <Image Grid.Column="1" Source="leftarrow.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                                        </Grid>
+                                    </Frame>
+                                </Grid>
+                            </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </controls:CustomFrame>
+            <!--Label Section-->
+            <Label Grid.Row="1" Text="Kullanıcı Girişi" Style="{StaticResource FooterBoldLabel}"/>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

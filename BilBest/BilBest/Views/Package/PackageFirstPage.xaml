@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BilBest.Views.Package.PackageFirstPage"
+             xmlns:inputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             xmlns:controls="clr-namespace:BilBest.CustomControls">
+    <ContentPage.Content>
+        <!--Main Grid-->
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0"
+                  BackgroundColor="{StaticResource LightGrayColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/> 
+            </Grid.RowDefinitions>
+            <controls:CustomFrame Grid.Row="0" Style="{StaticResource BackgroundBlueColorFrame}" BackgroundColor="{StaticResource LightGrayColor}">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,20">
+                    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
+                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15,30,15,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <!--Logo Header-->
+                                <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="imedgrayimg.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                </Grid>
+
+                                <!-- Details Section-->
+                                <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="15">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="15"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="15"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Text="Kullanım şeklinizi seçin" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource TextGrayColor}" FontSize="20" HorizontalTextAlignment="Center"/>
+                                    <Label Grid.Row="1" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis lectus vitae metus blandit laoreet. Proin non metus venenatis, ultricies tellus sed" 
+                                           Style="{StaticResource PrimaryMediumSmallLabel}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+
+                                    <Frame Grid.Row="3" Style="{StaticResource BigFrame}">
+                                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="60*"/>
+                                                <ColumnDefinition Width="40*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" RowSpacing="-8" Padding="20,0,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="10" Margin="0,-4,0,0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Column="0" Text="Bireysel" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource TextGrayColor}" 
+                                                           VerticalOptions="CenterAndExpand" FontSize="22" HorizontalTextAlignment="Start"/>
+                                                    <Image Grid.Column="1" Source="Ellipse93.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-2,0,0"/>
+                                                </Grid>
+                                                <Label Grid.Row="1" Text="Kişisel kullanım içindir." Style="{StaticResource PrimaryRegularSmallLabel}"
+                                                           VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" TextColor="{StaticResource AppExtraLightGrayColor}"/> 
+                                            </Grid>
+                                            <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                <Image Source="blueframe.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                                <Grid HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" RowSpacing="-8" Padding="0,0,20,0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" ColumnSpacing="10" Margin="0,-4,0,0"> 
+                                                        <Label Text="120 ₺" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource AppWhiteColor}" 
+                                                           VerticalOptions="CenterAndExpand" FontSize="22" HorizontalTextAlignment="End"/> 
+                                                    </Grid>
+                                                    <Label Grid.Row="1" Text="1 yıllık kullanım" Style="{StaticResource PrimaryRegularSmallLabel}"
+                                                           VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" TextColor="{StaticResource AppWhiteColor}"/>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+
+                                    <Frame Grid.Row="4" Style="{StaticResource BigFrame}">
+                                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="60*"/>
+                                                <ColumnDefinition Width="40*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" RowSpacing="-8" Padding="20,0,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="10" Margin="0,-4,0,0">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Column="0" Text="Aile" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource TextGrayColor}" 
+                                                           VerticalOptions="CenterAndExpand" FontSize="22" HorizontalTextAlignment="Start"/>
+                                                    <Image Grid.Column="1" Source="Ellipse93.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-2,0,0"/>
+                                                </Grid>
+                                                <Label Grid.Row="1" Text="Aile kullanım içindir." Style="{StaticResource PrimaryRegularSmallLabel}"
+                                                           VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" TextColor="{StaticResource AppExtraLightGrayColor}"/>
+                                            </Grid>
+                                            <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                <Image Source="pinkframe.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                                <Grid HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" RowSpacing="-8" Padding="0,0,20,0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" ColumnSpacing="10" Margin="0,-4,0,0">
+                                                        <Label Text="450 ₺" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource AppWhiteColor}" 
+                                                           VerticalOptions="CenterAndExpand" FontSize="22" HorizontalTextAlignment="End"/>
+                                                    </Grid>
+                                                    <Label Grid.Row="1" Text="1 yıllık kullanım" Style="{StaticResource PrimaryRegularSmallLabel}"
+                                                           VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" TextColor="{StaticResource AppWhiteColor}"/>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+
+                                    <Label Grid.Row="6" Text="Proin non metus venenatis, ultricies tellus sed" Style="{StaticResource PrimaryRegularSmallLabel}" HorizontalOptions="CenterAndExpand"
+                                                       Margin="10,0,10,0" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="{StaticResource AppExtraLightGrayColor}"/>
+
+                                    <Label Grid.Row="7" Text="*Vestibulum sit amet lectus eget turpis dignissim tristique. Maecenas ac felis eget urna pharetra auctor. " Style="{StaticResource PrimaryRegularSmallLabel}" HorizontalOptions="CenterAndExpand"
+                                                       Margin="10,0,10,0" VerticalOptions="StartAndExpand" HorizontalTextAlignment="Center" TextColor="{StaticResource AppExtraLightGrayColor}"/>
+
+                                </Grid>
+
+                                <!--Footer Section-->
+                                <Frame Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Style="{StaticResource VerySmallHeightFrame}" 
+                                       BackgroundColor="{StaticResource AppWhiteColor}" BorderColor="{StaticResource GrayIptalTextColor}" Padding="15,0,15,0">
+                                    <Grid HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="10,0,10,0">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BackCommand}"/>
+                                        </Grid.GestureRecognizers>
+                                        <Label Grid.Column="0" FontFamily="{StaticResource PoppinsSemiBold}" FontSize="13" Text="Geri" TextColor="{StaticResource TextGrayColor}"
+                                               VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Margin="0,3,0,0"/>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </controls:CustomFrame>
+         </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
