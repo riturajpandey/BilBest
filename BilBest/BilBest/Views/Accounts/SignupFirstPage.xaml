@@ -4,12 +4,151 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BilBest.Views.Accounts.SignupFirstPage">
+             x:Class="BilBest.Views.Accounts.SignupFirstPage"
+             xmlns:inputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             xmlns:controls="clr-namespace:BilBest.CustomControls">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <!--Main Grid-->
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0"
+                  BackgroundColor="{StaticResource AppSkyBlueColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <controls:CustomFrame Grid.Row="0" Style="{StaticResource BackgroundBlueColorFrame}" BackgroundColor="{StaticResource AppWhiteColor}" CornerRadius="0,0,80,0">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,20">
+                    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
+                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15,30,15,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <!--Logo Header-->
+                                <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="imedgrayimg.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                </Grid>
+
+                                <!--Login Details Section-->
+                                <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="15" Margin="0,0,0,30">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!--Username-->
+                                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <!--Header-->
+                                        <Label Grid.Row="0" Text="Adınız Soyadınız" Style="{StaticResource PrimaryGrayHeaders}" />
+                                        <!--Enter Username-->
+                                        <Frame Grid.Row="1" Style="{StaticResource SecondaryFrame}">
+                                            <controls:CustomEntry Text="{Binding UserName}" Placeholder="parola" PlaceholderColor="{StaticResource AppBlackColor}" 
+                                                          Style="{StaticResource PrimaryEntry}"/>
+                                        </Frame>
+
+                                    </Grid>
+
+                                    <!--Email-->
+                                    <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <!--Header-->
+                                        <Label Grid.Row="0" Text="E-posta Adresiniz" Style="{StaticResource PrimaryGrayHeaders}"/>
+                                        <!--Enter email-->
+                                        <Frame Grid.Row="1" Style="{StaticResource SecondaryFrame}">
+                                            <controls:CustomEntry Text="{Binding Email}" Placeholder="E-posta" PlaceholderColor="{StaticResource AppBlackColor}" 
+                                                          Style="{StaticResource PrimaryEntry}" Keyboard="Email"/>
+                                        </Frame>
+
+                                    </Grid>
+
+                                    <!--Telephone-->
+                                    <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <!--Header-->
+                                        <Label Grid.Row="0" Text="Telefon Numaranız" Style="{StaticResource PrimaryGrayHeaders}"/>
+                                        <!--Enter Username-->
+                                        <Frame Grid.Row="1" Style="{StaticResource SecondaryFrame}">
+                                            <controls:CustomEntry Text="{Binding TelephoneNum}" Placeholder="Telefone numarası" PlaceholderColor="{StaticResource AppBlackColor}" 
+                                                          Style="{StaticResource PrimaryEntry}" Keyboard="Telephone"/>
+                                        </Frame>
+
+                                    </Grid>
+
+                                    <!--imed email-->
+                                    <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <!--Header-->
+                                        <Label Grid.Row="0" Text="iMED E-Posta Adresiniz" Style="{StaticResource PrimaryGrayHeaders}"/>
+                                        <!--Enter ImedEmail-->
+                                        <Frame Grid.Row="1" Style="{StaticResource SecondaryFrame}">
+                                            <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/> 
+                                                    <ColumnDefinition Width="Auto"/> 
+                                                </Grid.ColumnDefinitions>
+                                                <controls:CustomEntry Grid.Column="0" Text="{Binding ImedEmail}" Placeholder="E-posta" PlaceholderColor="{StaticResource AppBlackColor}" 
+                                                          Style="{StaticResource PrimaryEntry}" Keyboard="Email"/>
+                                                <Label Grid.Column="1" Text="@imed.com" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Style="{StaticResource PrimaryRegularLabel}"
+                                                       TextColor="{StaticResource EmailGrayTextColor}"/>
+                                            </Grid>
+                                        </Frame>
+                                        <Label Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" FontFamily="{StaticResource PoppinsRegular}"
+                                                       FontSize="12">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Tebrikler, almak istediğiniz e-posta adresi " TextColor="{StaticResource TextGrayColor}"/>
+                                                    <Span Text="uygun." TextColor="{StaticResource TextGrayColor}" FontAttributes="Bold"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                    </Grid> 
+                                 </Grid>
+
+                                <!--Footer Section--> 
+                                <Frame Grid.Row="2" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" Style="{StaticResource SmallHeightFrame}" 
+                                       BackgroundColor="{StaticResource AppOrangeColor}">
+                                    <Grid HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="15,0,0,0">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding SignupFirstPageVM}"/>
+                                        </Grid.GestureRecognizers>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="60"/>
+                                            <ColumnDefinition Width="30"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" FontFamily="{StaticResource PoppinsSemiBold}" FontSize="13" Text="İlerle" TextColor="{StaticResource AppWhiteColor}"
+                                               VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Margin="0,3,0,0"/>
+                                        <Image Grid.Column="1" Source="alarmclock.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                                    </Grid>
+                                </Frame> 
+                            </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </controls:CustomFrame>
+            <!--Label Section-->
+            <Label Grid.Row="1" Text="Kullanıcı Girişi" Style="{StaticResource FooterBoldLabel}"/>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

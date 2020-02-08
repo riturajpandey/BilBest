@@ -96,6 +96,7 @@
             <Color x:Key="AppLightGrayColor">#5A5A5A</Color>
             
             
+            <Color x:Key="EmailGrayTextColor">#ADB0B1</Color>
             <!--#endregion-->
 
             <!--#region Controls -->  
