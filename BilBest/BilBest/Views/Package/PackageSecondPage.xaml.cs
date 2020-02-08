@@ -32,6 +32,7 @@ namespace BilBest.Views.Package
         {
             base.OnAppearing();
             PackageVM.GetPackages();
+            LvPackages.ItemsSource = PackageVM.PackageList;
         }
 
 
@@ -43,28 +44,28 @@ namespace BilBest.Views.Package
         private void Carousel_PositionSelected(object sender, CarouselView.FormsPlugin.Abstractions.PositionSelectedEventArgs e)
         {
             var index = e.NewValue;
-            ////var item = e.SelectedItem as Value;
-            //if (PackageVM.IntroductionList != null)
-            //{
-            //    var item = PackageVM.IntroductionList.ElementAt(index);
+            //var item = e.SelectedItem as Value;
+            if (PackageVM.PackageList != null)
+            {
+                var item = PackageVM.PackageList.ElementAt(index);
 
-            //    //For Indicators
-            //    foreach (var inditem in PackageVM.IndicatorList)
-            //    {
-            //        if (inditem.Id == item.ID)
-            //        {
-            //            inditem.IsCurrent = true;
-            //            inditem.IsNotCurrent = false;
-            //        }
-            //        else
-            //        {
-            //            inditem.IsCurrent = false;
-            //            inditem.IsNotCurrent = true;
-            //        }
-            //    }
-            //    LvIndicators.ItemsSource = null;
-            //    LvIndicators.ItemsSource = IntroVm.IndicatorList;
-            //}
+                //For Indicators
+                foreach (var inditem in PackageVM.IndicatorList)
+                {
+                    if (inditem.Id == item.Id)
+                    {
+                        inditem.IsCurrent = true;
+                        inditem.IsNotCurrent = false;
+                    }
+                    else
+                    {
+                        inditem.IsCurrent = false;
+                        inditem.IsNotCurrent = true;
+                    }
+                }
+                LvIndicators.ItemsSource = null;
+                LvIndicators.ItemsSource = PackageVM.IndicatorList;
+            }
         }
         #endregion
     }

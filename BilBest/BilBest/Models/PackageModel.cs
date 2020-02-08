@@ -48,6 +48,6 @@ namespace BilBest.Models
     {
         public bool IsCurrent { get; set; }
         public bool IsNotCurrent { get; set; }
-        public string Id { get; set; }
+        public int Id { get; set; }
     }
 }

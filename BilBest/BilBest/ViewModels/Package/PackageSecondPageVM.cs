@@ -73,7 +73,7 @@ namespace BilBest.ViewModels.Package
                     objIndicator.IsCurrent = false;
                     objIndicator.IsNotCurrent = true;
                 }
-                objIndicator.Id = item.Id.ToString();
+                objIndicator.Id = item.Id;
                 indicatorList.Add(objIndicator);
             }
             IndicatorList = indicatorList;

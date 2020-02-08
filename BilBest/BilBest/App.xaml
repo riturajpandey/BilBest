@@ -30,6 +30,7 @@
             <Color x:Key="AppBorderBlueColor">#1E93EB</Color>
             <Color x:Key="AppSlightLightBlueColor">#86CBFF</Color>
             <Color x:Key="AppExtraLightGrayColor">#B5B5B5</Color>
+            <Color x:Key="AppVeryExtraLightGrayColor">#EFEFEF</Color>
 
             <!--White-->
             <Color x:Key="AppWhiteColor">#FFFFFF</Color>
@@ -335,6 +336,13 @@
                 <Setter Property="TextColor" Value="{StaticResource GrayIptalTextColor}" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <!--Popins Bold 13-->
+            <Style x:Key="Popins13BoldText" TargetType="Label">
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsBold}" />
+                <Setter Property="FontAttributes" Value="Bold" />  
             </Style>
 
             <Style x:Key="PrimaryLabel" TargetType="Label">
