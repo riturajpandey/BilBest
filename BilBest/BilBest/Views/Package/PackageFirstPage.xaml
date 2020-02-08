@@ -6,7 +6,8 @@
              mc:Ignorable="d"
              x:Class="BilBest.Views.Package.PackageFirstPage"
              xmlns:inputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
-             xmlns:controls="clr-namespace:BilBest.CustomControls">
+             xmlns:controls="clr-namespace:BilBest.CustomControls"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <!--Main Grid-->
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0"
@@ -66,7 +67,7 @@
                                                     </Grid.ColumnDefinitions>
                                                     <Label Grid.Column="0" Text="Bireysel" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource TextGrayColor}" 
                                                            VerticalOptions="CenterAndExpand" FontSize="22" HorizontalTextAlignment="Start"/>
-                                                    <Image Grid.Column="1" Source="Ellipse93.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-2,0,0"/>
+                                                    <Image Grid.Column="1" Source="info.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-2,0,0"/>
                                                 </Grid>
                                                 <Label Grid.Row="1" Text="Kişisel kullanım içindir." Style="{StaticResource PrimaryRegularSmallLabel}"
                                                            VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" TextColor="{StaticResource AppExtraLightGrayColor}"/> 
@@ -107,7 +108,7 @@
                                                     </Grid.ColumnDefinitions>
                                                     <Label Grid.Column="0" Text="Aile" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource TextGrayColor}" 
                                                            VerticalOptions="CenterAndExpand" FontSize="22" HorizontalTextAlignment="Start"/>
-                                                    <Image Grid.Column="1" Source="Ellipse93.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-2,0,0"/>
+                                                    <Image Grid.Column="1" Source="info.png" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-2,0,0"/>
                                                 </Grid>
                                                 <Label Grid.Row="1" Text="Aile kullanım içindir." Style="{StaticResource PrimaryRegularSmallLabel}"
                                                            VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" TextColor="{StaticResource AppExtraLightGrayColor}"/>
