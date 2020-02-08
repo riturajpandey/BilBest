@@ -8,7 +8,8 @@
              xmlns:inputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              xmlns:controls="clr-namespace:BilBest.CustomControls"
              xmlns:suave="clr-namespace:SuaveControls.DynamicStackLayout;assembly=SuaveControls.DynamicStackLayout"
-             xmlns:carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions">
+             xmlns:carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <!--Main Grid-->
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
@@ -21,7 +22,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="80"/>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="110"/>
                     </Grid.RowDefinitions>
                     <!--Logo Header-->
                     <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -45,15 +46,14 @@
 
                         <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="5">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="*"/> 
                             </Grid.RowDefinitions>
                             <!--Package List-->
                             <carousel:CarouselViewControl Grid.Row="0" x:Name="LvPackages" PositionSelected="Carousel_PositionSelected" Orientation="Horizontal"
                                           ItemsSource="{Binding PackageList}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ShowIndicators="True">
                                 <carousel:CarouselViewControl.ItemTemplate>
                                     <DataTemplate>
-                                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" RowSpacing="0" Padding="25,0,25,27">
+                                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" RowSpacing="0" Padding="25,0,25,30">
                                             <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" IsClippedToBounds="True" HeightRequest="500"
                                                BackgroundColor="{StaticResource AppWhiteColor}" HasShadow="True" CornerRadius="15">
                                                 <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0" >
@@ -61,7 +61,7 @@
                                                         <RowDefinition Height="45*"/>
                                                         <RowDefinition Height="55*"/>
                                                     </Grid.RowDefinitions>
-                                                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppDarkOrangeColor}">
+                                                    <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                                         <Image Aspect="Fill" Source="{Binding PkgImage}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                                                         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent">
                                                             <Grid.RowDefinitions>
@@ -90,28 +90,28 @@
                                                             </Grid>
                                                         </Grid>
                                                     </Grid>
-
+ 
                                                     <!--checkboxes-->
                                                     <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="12,0,12,0" RowSpacing="0">
                                                         <Grid.RowDefinitions>
                                                             <RowDefinition Height="*"/>
                                                             <RowDefinition Height="1.5"/>
                                                             <RowDefinition Height="*"/>
-                                                            <RowDefinition Height="1.5"/>
+                                                            <RowDefinition Height="1.5"/> 
                                                             <RowDefinition Height="*"/>
                                                         </Grid.RowDefinitions>
-                                                        <inputKit:RadioButton Grid.Row="0" Text="Lectus vitae metus blandi" TextColor="{StaticResource TextGrayColor}" Padding="0,10,0,10"
-                                                                              CircleColor="{StaticResource AppVioletColor}" Color="{StaticResource AppVioletColor}" TextFontSize="13" FontFamily="{StaticResource PoppinsBold}"/>
+                                                        <inputKit:RadioButton Grid.Row="0" Text="Lectus vitae metus blandi" TextColor="{StaticResource TextGrayColor}" Padding="0,10,0,10" IsChecked="{Binding IsLectus}" Clicked="LectusRadioButton_Checked"
+                                                                              CircleColor="{StaticResource AppLightGrayColor}" Color="{Binding PkgColor}" TextFontSize="13" FontFamily="{StaticResource PoppinsBold}"/>
 
                                                         <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppVeryExtraLightGrayColor}"/>
 
-                                                        <inputKit:RadioButton Grid.Row="2" Text="Lectus vitae metus blandi" TextColor="{StaticResource TextGrayColor}" Padding="0,10,0,10"
-                                                                              CircleColor="{StaticResource AppVioletColor}" Color="{StaticResource AppVioletColor}" TextFontSize="13" FontFamily="{StaticResource PoppinsBold}"/>
+                                                        <inputKit:RadioButton Grid.Row="2" Text="Proin non metus venenatis" TextColor="{StaticResource TextGrayColor}" Padding="0,10,0,10" IsChecked="{Binding IsPrions}"
+                                                                              CircleColor="{StaticResource AppLightGrayColor}" Color="{Binding PkgColor}" TextFontSize="13" FontFamily="{StaticResource PoppinsBold}" Clicked="PrionsRadioButton_Checked"/>
 
                                                         <BoxView Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppVeryExtraLightGrayColor}"/>
 
-                                                        <inputKit:RadioButton Grid.Row="4" Text="Lectus vitae metus blandi" TextColor="{StaticResource TextGrayColor}" Padding="0,10,0,10"
-                                                                              CircleColor="{StaticResource AppVioletColor}" Color="{StaticResource AppVioletColor}" TextFontSize="13" FontFamily="{StaticResource PoppinsBold}"/>
+                                                        <inputKit:RadioButton Grid.Row="4" Text="Consectetur adipiscing elit" TextColor="{StaticResource TextGrayColor}" Padding="0,10,0,10" IsChecked="{Binding IsConsec}"
+                                                                              CircleColor="{StaticResource AppLightGrayColor}" Color="{Binding PkgColor}" TextFontSize="13" FontFamily="{StaticResource PoppinsBold}" Clicked="ConsecRadioButton_Checked"/>
                                                     </Grid>
                                                 </Grid>
                                             </Frame>
@@ -119,21 +119,7 @@
                                     </DataTemplate>
                                 </carousel:CarouselViewControl.ItemTemplate>
                             </carousel:CarouselViewControl>
-                            <!--Indicator List-->
-                            <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                                <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                    <suave:DynamicStackLayout x:Name="LvIndicators" ItemsSource="{Binding IndicatorList}" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                                        <suave:DynamicStackLayout.ItemTemplate>
-                                            <DataTemplate>
-                                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="0" Margin="2,0,2,0" BackgroundColor="Transparent">
-                                                    <Image x:Name="imgFirst" Source="Ellipse141.png"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsCurrent}" HeightRequest="10" WidthRequest="10"/>
-                                                    <Image x:Name="imgSecond" Source="Ellipse142.png"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsNotCurrent}" HeightRequest="10" WidthRequest="10"/>
-                                                </StackLayout>
-                                            </DataTemplate>
-                                        </suave:DynamicStackLayout.ItemTemplate>
-                                    </suave:DynamicStackLayout>
-                                </ScrollView>
-                            </Grid>
+                            
                         </Grid>
                     </Grid>
 
@@ -144,7 +130,8 @@
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
 
-                        <Button Grid.Row="0" Style="{StaticResource BluBoldButton}" Text="Paketi Seç" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppOrangeColor}"/>
+                        <Button Grid.Row="0" Style="{StaticResource BluBoldButton}" Text="Paketi Seç" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                               Command="{Binding ChoosePackageCommand}" BackgroundColor="{StaticResource AppOrangeColor}"/>
                         <Label Grid.Row="1" Style="{StaticResource İptalTextStyles}" Text="Geri" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
                     </Grid>
                 </Grid>

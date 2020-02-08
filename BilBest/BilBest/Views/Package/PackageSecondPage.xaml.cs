@@ -1,4 +1,6 @@
-﻿using BilBest.ViewModels.Package;
+﻿using BilBest.Models;
+using BilBest.ViewModels.Package;
+using Plugin.InputKit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +15,12 @@ namespace BilBest.Views.Package
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PackageSecondPage : ContentPage
-    {  
+    {
         //TODO : To Define class Level Variables...
         PackageSecondPageVM PackageVM;
+        int pkgPosition = 0;
+        bool islistRefresh = false;
+
         public PackageSecondPage()
         {
             InitializeComponent();
@@ -35,7 +40,6 @@ namespace BilBest.Views.Package
             LvPackages.ItemsSource = PackageVM.PackageList;
         }
 
-
         /// <summary>
         /// TODO : To Define On Carousel Changed event...
         /// </summary>
@@ -44,29 +48,96 @@ namespace BilBest.Views.Package
         private void Carousel_PositionSelected(object sender, CarouselView.FormsPlugin.Abstractions.PositionSelectedEventArgs e)
         {
             var index = e.NewValue;
-            //var item = e.SelectedItem as Value;
-            if (PackageVM.PackageList != null)
-            {
-                var item = PackageVM.PackageList.ElementAt(index);
+            if (islistRefresh == false)
+                pkgPosition = LvPackages.Position;
 
-                //For Indicators
-                foreach (var inditem in PackageVM.IndicatorList)
+            PackageVM.SelectedPackage = PackageVM.PackageList.Where(a => a.Id == LvPackages.Position + 1).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// TODO : To Define Event Handler For Lectus Radio button tapped...
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LectusRadioButton_Checked(object sender, EventArgs e)
+        {
+            var item = (sender as Plugin.InputKit.Shared.Controls.RadioButton).BindingContext as PackageModel;
+            if (item != null)
+            {
+                foreach (var pkg in PackageVM.PackageList)
                 {
-                    if (inditem.Id == item.Id)
+                    if (item.Id == pkg.Id)
                     {
-                        inditem.IsCurrent = true;
-                        inditem.IsNotCurrent = false;
-                    }
-                    else
-                    {
-                        inditem.IsCurrent = false;
-                        inditem.IsNotCurrent = true;
+                        if (item.IsLectus)
+                            pkg.IsLectus = false;
+                        else
+                            pkg.IsLectus = true;
                     }
                 }
-                LvIndicators.ItemsSource = null;
-                LvIndicators.ItemsSource = PackageVM.IndicatorList;
+                islistRefresh = true;
+                LvPackages.ItemsSource = null;
+                LvPackages.ItemsSource = PackageVM.PackageList;
+                LvPackages.Position = pkgPosition;
+                islistRefresh = false;
+            }
+        }
+
+        /// <summary>
+        /// TODO : To Define Event Handler For Prions Radio button tapped...
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PrionsRadioButton_Checked(object sender, EventArgs e)
+        {
+            var item = (sender as Plugin.InputKit.Shared.Controls.RadioButton).BindingContext as PackageModel;
+            if (item != null)
+            {
+                foreach (var pkg in PackageVM.PackageList)
+                {
+                    if (item.Id == pkg.Id)
+                    {
+                        if (item.IsPrions)
+                            pkg.IsPrions = false;
+                        else
+                            pkg.IsPrions = true;
+                    }
+                }
+                islistRefresh = true;
+                LvPackages.ItemsSource = null;
+                LvPackages.ItemsSource = PackageVM.PackageList;
+                LvPackages.Position = pkgPosition;
+                islistRefresh = false;
+            }
+        }
+
+        /// <summary>
+        /// TODO : To Define Event Handler For Consec Radio button tapped...
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ConsecRadioButton_Checked(object sender, EventArgs e)
+        {
+            var item = (sender as Plugin.InputKit.Shared.Controls.RadioButton).BindingContext as PackageModel;
+            if (item != null)
+            {
+                foreach (var pkg in PackageVM.PackageList)
+                {
+                    if (item.Id == pkg.Id)
+                    {
+                        if (item.IsConsec)
+                            pkg.IsConsec = false;
+                        else
+                            pkg.IsConsec = true;
+                    }
+                }
+                islistRefresh = true;
+                LvPackages.ItemsSource = null;
+                LvPackages.ItemsSource = PackageVM.PackageList;
+                LvPackages.Position = pkgPosition;
+                islistRefresh = false;
             }
         }
         #endregion
+
     }
 }

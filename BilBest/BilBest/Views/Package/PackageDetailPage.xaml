@@ -4,12 +4,29 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BilBest.Views.Package.PackageDetailPage">
+             x:Class="BilBest.Views.Package.PackageDetailPage" 
+             xmlns:inputKit="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             xmlns:controls="clr-namespace:BilBest.CustomControls"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <!--MainGrid-->
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0" BackgroundColor="{Binding PackageColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!--Header-->
+            <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image Source="imedimg.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+             
+            <!--Details-->
+            <controls:CustomFrame Grid.Row="1" Style="{StaticResource BackgroundBlueColorFrame}" CornerRadius="40,0,40,0">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    
+                </Grid>
+            </controls:CustomFrame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

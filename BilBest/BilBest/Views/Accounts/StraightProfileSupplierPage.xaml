@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BilBest.Views.Accounts.StraightProfileSupplierPage"
-             xmlns:controls="clr-namespace:BilBest.CustomControls">
+             xmlns:controls="clr-namespace:BilBest.CustomControls"
+             NavigationPage.HasNavigationBar="False">
     <!--Main Grid-->
     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource LightGrayColor}">
         <Grid.RowDefinitions>

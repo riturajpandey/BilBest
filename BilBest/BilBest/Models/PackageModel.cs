@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BilBest.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BilBest.Models
 {
-    public class PackageModel
+    public class PackageModel : BaseViewModel
     {
         public int Id { get; set; }
         public string PkgImage { get; set; }
@@ -14,6 +15,7 @@ namespace BilBest.Models
         public bool IsLectus { get; set; }
         public bool IsPrions { get; set; }
         public bool IsConsec { get; set; }
+        public string PkgColor { get; set; }
 
         public static List<PackageModel> GetPackages()
         {
@@ -28,7 +30,8 @@ namespace BilBest.Models
              AmountText="1 yıllık kullanım",
              IsConsec=false,
              IsLectus=false,
-             IsPrions=false, 
+             IsPrions=false,
+             PkgColor= "#4834D4",
           },
           new PackageModel ()
           {
@@ -40,6 +43,7 @@ namespace BilBest.Models
              IsConsec=false,
              IsLectus=false,
              IsPrions=false,
+             PkgColor= "#BE2EDD",
           },
         };
         } 
