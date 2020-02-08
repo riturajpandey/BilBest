@@ -174,6 +174,9 @@
     <PackageReference Include="Rg.Plugins.Popup">
       <Version>1.2.0.223</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
     <PackageReference Include="Xam.Plugins.Settings">
       <Version>3.1.1</Version>
     </PackageReference>
@@ -525,5 +528,41 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\pinkcheck%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse142%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse141%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse141%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse142.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ellipse142%402x.png" />
   </ItemGroup>
 </Project>

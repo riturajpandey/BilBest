@@ -7,7 +7,7 @@
              x:Class="BilBest.Views.Accounts.StraightProfileSupplierPage"
              xmlns:controls="clr-namespace:BilBest.CustomControls">
     <!--Main Grid-->
-    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppWhiteColor}">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource LightGrayColor}">
         <Grid.RowDefinitions>
             <RowDefinition Height="230"/>
             <RowDefinition Height="*"/>

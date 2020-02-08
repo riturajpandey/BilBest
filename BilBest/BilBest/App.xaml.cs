@@ -20,7 +20,7 @@ namespace BilBest
             AppSetup appSetup = new AppSetup();
             _container = appSetup.CreateContainer();
              
-            MainPage = new Views.Health.HealthRecommendations();
+            MainPage = new Views.Health.MyHealthRecords();
         }
 
         protected override void OnStart()

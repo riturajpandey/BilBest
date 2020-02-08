@@ -8,7 +8,7 @@
              xmlns:controls="clr-namespace:BilBest.CustomControls"
              NavigationPage.HasNavigationBar="False">
     <!--Main Grid-->
-    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource AppWhiteColor}">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource LightGrayColor}">
         <Grid.RowDefinitions>
             <RowDefinition Height="110"/>
             <RowDefinition Height="*"/>
