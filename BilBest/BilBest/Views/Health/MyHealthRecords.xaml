@@ -41,7 +41,7 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Text="Sağlık Kayıtlarım" Style="{StaticResource PrimaryBigWhiteHeaders}" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Start" VerticalTextAlignment="End"/>
                     <!--Search Image Section-->
-                    <Ci:CircleImage  HeightRequest="30" Aspect="AspectFill" BackgroundColor="White" BorderThickness="1" BorderColor="White" Source="" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
+                    <Frame Grid.Column="1"  CornerRadius="35" BackgroundColor="White"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 </Grid>
             </Grid>
         </Grid>
