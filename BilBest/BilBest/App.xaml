@@ -52,6 +52,7 @@
             <Color x:Key="AppDarkYellowColor">#FDCB6E</Color>
             <Color x:Key="AppYellowColor">#FFD864</Color>
             <Color x:Key="AppLightYellowColor">#FDCB6E</Color>
+            <Color x:Key="YellowColor">#FFD964</Color>
 
             <!--Pink Shades-->
             <Color x:Key="AppPinkColor">#FD79A8</Color>
@@ -89,6 +90,12 @@
             <Color x:Key="GrayTextColor">#A4A4A4</Color>
             <Color x:Key="GrayIptalTextColor">#71899A</Color>
             <Color x:Key="DarkGrayTextColor">#C4C4C4</Color>
+            <Color x:Key="GrayBorderColor">#DEDEDE</Color>
+            
+            <!--Light Gray Shades-->
+            <Color x:Key="AppLightGrayColor">#5A5A5A</Color>
+            
+            
             <!--#endregion-->
 
             <!--#region Controls -->  

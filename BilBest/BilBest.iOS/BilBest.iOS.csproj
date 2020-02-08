@@ -481,4 +481,49 @@
   <ItemGroup>
     <BundleResource Include="Resources\leftarrow%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\medicalparkimg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\medicalparkimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\medicalparkimg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blackleftarrow%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blackleftarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blackleftarrow%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bluecheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bluecheck%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bluecheck%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cross%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cross%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pinkcheck%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pinkcheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pinkcheck%402x.png" />
+  </ItemGroup>
 </Project>

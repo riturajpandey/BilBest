@@ -20,7 +20,7 @@ namespace BilBest
             AppSetup appSetup = new AppSetup();
             _container = appSetup.CreateContainer();
              
-            MainPage = new Views.Accounts.StraightProfileSupplierPage();
+            MainPage = new Views.Health.HealthRecommendations();
         }
 
         protected override void OnStart()
