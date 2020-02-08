@@ -94,6 +94,7 @@
             
             <!--Light Gray Shades-->
             <Color x:Key="AppLightGrayColor">#5A5A5A</Color>
+            <Color x:Key="BorderLightGrayColor">#EFEFEF</Color>
             
             
             <Color x:Key="EmailGrayTextColor">#ADB0B1</Color>
@@ -329,6 +330,13 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
+            <!--Dark Gray SemiBold Label-->
+            <Style x:Key="DarkGraySemiBoldLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="FontFamily" Value="{DynamicResource PoppinsSemiBold}" />
+                <Setter Property="TextColor" Value="{StaticResource TextGrayColor}" />
+            </Style>
+            
             <!--#endregion-->
     
             <!--#region Entrys -->

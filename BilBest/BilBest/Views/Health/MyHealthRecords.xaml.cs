@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BilBest.ViewModels.Health;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,15 @@ namespace BilBest.Views.Health
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MyHealthRecords : ContentPage
     {
+        //Define Properties Here
+        protected MyHealthRecordsVM MyHealthRecordsVM;
+        #region Constructor
         public MyHealthRecords()
         {
             InitializeComponent();
-        }
+            MyHealthRecordsVM = new MyHealthRecordsVM(this.Navigation);
+            BindingContext = MyHealthRecordsVM;
+        } 
+        #endregion
     }
 }
