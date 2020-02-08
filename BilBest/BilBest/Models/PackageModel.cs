@@ -11,6 +11,7 @@ namespace BilBest.Models
         public string PkgImage { get; set; }
         public string Title { get; set; }
         public string Amount { get; set; }
+        public string ActualAmount { get; set; }
         public string AmountText { get; set; }
         public bool IsLectus { get; set; }
         public bool IsPrions { get; set; }
@@ -32,6 +33,7 @@ namespace BilBest.Models
              IsLectus=false,
              IsPrions=false,
              PkgColor= "#4834D4",
+             ActualAmount = "120"
           },
           new PackageModel ()
           {
@@ -44,6 +46,7 @@ namespace BilBest.Models
              IsLectus=false,
              IsPrions=false,
              PkgColor= "#BE2EDD",
+             ActualAmount = "450"
           },
         };
         } 

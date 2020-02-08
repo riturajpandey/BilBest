@@ -1,4 +1,5 @@
 ﻿using BilBest.Models;
+using BilBest.Views.Package;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,15 +22,26 @@ namespace BilBest.ViewModels.Package
             SelectedPackage = selectedPackage;
             PackageColor = selectedPackage.PkgColor;
             if (selectedPackage.Id == 1)
-                PackageTickImage = "";
+                PackageTickImage = "bluecheck.png";
             else
                 PackageTickImage = "pinkcheck.png";
+
+            PackageName = selectedPackage.Title;
+            PackageAmount = selectedPackage.ActualAmount ;
 
         }
         #endregion
 
         #region COMMANDS  
         public Command ChoosePackageCommand { get; set; }
+
+        #endregion
+
+
+        #region Properties
+
+        public PackageModel SelectedPackage = new PackageModel();
+
 
         private string _PackageColor;
         public string PackageColor
@@ -57,28 +69,32 @@ namespace BilBest.ViewModels.Package
                 }
             }
         }
-        #endregion
-
-
-        #region Properties
-
-        public PackageModel SelectedPackage = new PackageModel();
-
-
-        private string _Password;
-        public string Password
+        private string _PackageName;
+        public string PackageName
         {
-            get { return _Password; }
+            get { return _PackageName; }
             set
             {
-                if (_Password != value)
+                if (_PackageName != value)
                 {
-                    _Password = value;
-                    OnPropertyChanged("Password");
+                    _PackageName = value;
+                    OnPropertyChanged("PackageName");
                 }
             }
         }
-
+        private string _PackageAmount;
+        public string PackageAmount
+        {
+            get { return _PackageAmount; }
+            set
+            {
+                if (_PackageAmount != value)
+                {
+                    _PackageAmount = value;
+                    OnPropertyChanged("PackageAmount");
+                }
+            }
+        }
         #endregion
 
         #region Methods
@@ -89,11 +105,11 @@ namespace BilBest.ViewModels.Package
         }
 
         /// <summary>
-        /// TODO : To Go To Choose Package Command ...
+        /// TODO : To Go To Paymnet Package Command ...
         /// </summary>
         public async void OnChoosePackageAsync()
         {
-            //await Navigation.PushAsync(new PackageDetailPage(SelectedPackage));
+            await Navigation.PushAsync(new PackagePaymentPage(SelectedPackage));
         }
         #endregion
     }

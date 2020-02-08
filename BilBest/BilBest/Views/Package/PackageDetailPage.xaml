@@ -12,21 +12,139 @@
         <!--MainGrid-->
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0" BackgroundColor="{Binding PackageColor}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="70"/>
+                <RowDefinition Height="110"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
+
             <!--Header-->
             <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Image Source="imedimg.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
             </Grid>
-             
+
             <!--Details-->
-            <controls:CustomFrame Grid.Row="1" Style="{StaticResource BackgroundBlueColorFrame}" CornerRadius="40,0,40,0">
-                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    
-                </Grid>
+
+            <controls:CustomFrame Grid.Row="1" Style="{StaticResource BackgroundBlueColorFrame}" BackgroundColor="{StaticResource AppWhiteColor}" CornerRadius="40,40,0,0">
+                <ScrollView  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsClippedToBounds="True">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20,20,20,0" RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="2"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding PackageName}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="26"
+                           HorizontalTextAlignment="Center" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{StaticResource TextGrayColor}"/>
+                            <Image Source="cross.png" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+
+                        <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource VeryLightGrayTextColor}" 
+                             Opacity="0.4" Margin="60,0,60,0"/>
+
+                        <Frame Grid.Row="3" Style="{StaticResource SlightBigFrame}" BorderColor="{Binding PackageColor}" Margin="50,0,50,0">
+                            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="0,5,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding PackageAmount}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="28"
+                           HorizontalTextAlignment="Center" Style="{StaticResource PrimaryBigWhiteHeaders}" TextColor="{Binding PackageColor}"/>
+                                <Label Grid.Column="1" Text="₺ / yıllık" Style="{StaticResource PrimaryRegularLabel}" FontSize="14" TextColor="{Binding PackageColor}" Margin="0,0,0,0"
+                                   VerticalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+
+                        <Label Grid.Row="5" Style="{StaticResource PrimaryMediumSmallLabel}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis lectus vitae metus blandit laoreet."
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="End" HorizontalTextAlignment="Center"/>
+
+                        <Grid Grid.Row="7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding PackageTickImage}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="1" Text="Aenean consequat lectus sit amet orci pellentesque" Style="{StaticResource Popins13BoldText}" TextColor="{StaticResource TextGrayColor}" 
+                                   VerticalOptions="Center"/>
+                        </Grid>
+
+                        <Grid Grid.Row="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="10" Margin="0,5,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding PackageTickImage}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="1" Text="Proin non metus venenatis" Style="{StaticResource Popins13BoldText}" TextColor="{StaticResource TextGrayColor}" 
+                                   VerticalOptions="Center"/>
+                        </Grid>
+
+                        <Grid Grid.Row="9" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="10" Margin="0,5,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding PackageTickImage}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="1" Text="Mauris suscipit nibh vel venenatis fringilla." Style="{StaticResource Popins13BoldText}" TextColor="{StaticResource TextGrayColor}" 
+                                   VerticalOptions="Center"/>
+                        </Grid>
+
+                        <Grid Grid.Row="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="10" Margin="0,5,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding PackageTickImage}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="1" Text="Aliquam in orci sed lacus luctus porta." Style="{StaticResource Popins13BoldText}" TextColor="{StaticResource TextGrayColor}" 
+                                   VerticalOptions="Center"/>
+                        </Grid>
+
+                        <Grid Grid.Row="11" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="10" Margin="0,5,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding PackageTickImage}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="1" Text="Praesent scelerisque mollis sollicitudin." Style="{StaticResource Popins13BoldText}" TextColor="{StaticResource TextGrayColor}" 
+                                   VerticalOptions="Center"/>
+                        </Grid>
+
+                        <Grid Grid.Row="12" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="10" Margin="0,5,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding PackageTickImage}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="1" Text="Consectetur adipiscing elit" Style="{StaticResource Popins13BoldText}" TextColor="{StaticResource TextGrayColor}" 
+                                   VerticalOptions="Center"/>
+                        </Grid>
+
+                        <Grid Grid.Row="15" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Button Grid.Row="0" Style="{StaticResource BluBoldButton}" Text="Paketi Seç" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                               Command="{Binding ChoosePackageCommand}" BackgroundColor="{Binding PackageColor}"/>
+
+                            <Label Grid.Row="1" Style="{StaticResource İptalTextStyles}" Text="Geri" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Grid>
+                    </Grid>
+                </ScrollView>
             </controls:CustomFrame>
+
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
