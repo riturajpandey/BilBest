@@ -571,4 +571,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\Ellipse142%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\info%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\info%402x.png" />
+  </ItemGroup>
 </Project>
